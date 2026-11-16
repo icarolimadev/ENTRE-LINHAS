@@ -1,0 +1,45 @@
+/* Ícones locais: grade 24 × 24, traço 2 px e pontas arredondadas.
+   Uso: <span class="icon icon-home" aria-hidden="true"></span>
+   Use texto visível junto ao ícone; em botões sem texto, use aria-label.
+*/
+.icon {
+    --icon-size: 24px;
+    display: inline-block;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    flex-shrink: 0;
+    vertical-align: middle;
+    color: var(--destaque, #DFABFF);
+    background-color: currentColor;
+    -webkit-mask: var(--icon-image) center / contain no-repeat;
+    mask: var(--icon-image) center / contain no-repeat;
+}
+
+/* Tamanhos da referência */
+.icon--small { --icon-size: 20px; }
+.icon--large { --icon-size: 32px; }
+
+/* Aplique no botão ou link para garantir a área mínima de toque. */
+.acao-com-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Caminhos relativos a este arquivo CSS. */
+.icon-home { --icon-image: url("./home.svg"); }
+.icon-arrow-left { --icon-image: url("./arrow-left.svg"); }
+.icon-arrow-right { --icon-image: url("./arrow-right.svg"); }
+.icon-play { --icon-image: url("./play.svg"); }
+.icon-user { --icon-image: url("./user.svg"); }
+.icon-calendar { --icon-image: url("./calendar.svg"); }
+.icon-book-open { --icon-image: url("./book-open.svg"); }
+.icon-info { --icon-image: url("./info.svg"); }
+.icon-users { --icon-image: url("./users.svg"); }
+.icon-lightbulb { --icon-image: url("./lightbulb.svg"); }
+.icon-circle-check { --icon-image: url("./circle-check.svg"); }
+.icon-rotate-ccw { --icon-image: url("./rotate-ccw.svg"); }
+.icon-at-sign { --icon-image: url("./at-sign.svg"); }

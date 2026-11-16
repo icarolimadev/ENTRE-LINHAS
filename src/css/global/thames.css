@@ -1,0 +1,23 @@
+
+
+/* Cores da interface */
+:root {
+    --fundo-principal: #1C0B2D;
+    --superficie: #341748;
+    --acao-principal: #8D2FD0;
+    --contorno: #C17DEC;
+    --destaque: #DFABFF;
+    --texto-principal: #F5F5F7;
+    --texto-secundario: #CFB9DE;
+}
+
+/* cores do arco iris*/
+:root {
+    --red-1: #EF4444;
+    --orange-2: #F59E0B;
+    --yellow-3: #FACC15;
+    --green-4: #22C55E;
+    --blue-5: #3882F6;
+    --purple-6: #A855F7;
+}
+
