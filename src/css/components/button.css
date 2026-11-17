@@ -1,0 +1,24 @@
+/* Estilo padrão compartilhado por todos os botões do site. */
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 20px;
+    border: 1px solid var(--contorno);
+    border-radius: 18px;
+    background-color: var(--acao-principal);
+    color: var(--texto-principal);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #7925b5;
+}
+
+button:active {
+    background-color: var(--superficie);
+}
+

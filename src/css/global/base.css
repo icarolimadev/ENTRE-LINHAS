@@ -1,0 +1,21 @@
+/* Base compartilhada: tamanhos previsíveis e remoção das margens do navegador. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Imagens permanecem dentro do espaço disponível, sem perder suas proporções. */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Foco visível para quem navega usando teclado. */
+:where(a, button):focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 5px;
+}

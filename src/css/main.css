@@ -1,0 +1,16 @@
+/* Folha principal: carrega primeiro o tema e a base, depois as páginas. */
+@import url("./global/thames.css");
+@import url("./global/base.css");
+@import url("./global/typography.css");
+
+
+/* Componentes compartilhados entre as páginas. */
+@import url("./components/button.css");
+@import url("./components/logo.css");
+@import url("./components/rodape.css");
+
+/* Páginas: cada uma com seu próprio estilo, mas todas dependem do tema e da base. */
+@import url("./pages/entrada.css");
+@import url("./pages/boas-vindas.css");
+@import url("./pages/identificação.css");
+@import url("./pages/inicio.css");

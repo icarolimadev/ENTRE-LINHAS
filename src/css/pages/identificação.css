@@ -1,0 +1,77 @@
+.pagina-identificacao {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+}
+
+/* Estrutura necessária para o rodapé compartilhado acompanhar o final da tela. */
+.identificação {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.identificação__conteudo {
+    width: min(100%, 440px);
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.identificação__titulo {
+    margin: 20px 0 18px;
+    font-size: clamp(1.375rem, 6vw, 1.75rem);
+    letter-spacing: -0.025em;
+}
+
+.identificação__mensagem {
+    margin: 0 0 16px;
+    font-size: var(--tamanho-botao);
+}
+
+/* Mantém o rótulo acessível mesmo quando o placeholder desaparece. */
+.identificação__rotulo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.identificação__campo {
+    display: block;
+    width: 100%;
+    min-height: 58px;
+    padding: 16px 18px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: var(--superficie);
+    color: var(--texto-principal);
+    font-size: var(--tamanho-botao);
+}
+
+.identificação__campo::placeholder {
+    color: var(--texto-principal);
+    opacity: 1;
+}
+
+.identificação__campo:focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 3px;
+}
+
+.identificação__aviso {
+    margin: 18px 0;
+    color: var(--texto-secundario);
+    font-size: var(--tamanho-legenda);
+    line-height: 1.35;
+}
+
+@media (max-width: 359px) {
+    .identificação__conteudo {
+        padding-inline: 20px;
+    }
+}

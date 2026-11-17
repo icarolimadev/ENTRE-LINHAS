@@ -1,0 +1,23 @@
+/* Cabeçalho reutilizável: mantém a marca alinhada à direita e ao conteúdo. */
+.cabecalho-logo {
+    display: flex;
+    justify-content: flex-end;
+    width: min(100%, 440px);
+    margin-inline: auto;
+    padding: max(24px, env(safe-area-inset-top)) 24px 32px;
+}
+
+/* Dimensões da marca independentes da página em que ela aparece. */
+.logo {
+    display: block;
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+/* Mantém o alinhamento em celulares estreitos. */
+@media (max-width: 359px) {
+    .cabecalho-logo {
+        padding-inline: 20px;
+    }
+}

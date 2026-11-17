@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Documento HTML5 com conteúdo em português do Brasil. -->
+<html lang="pt-BR">
+<head>
+    <!-- Define a codificação dos textos e adapta a viewport à largura do dispositivo. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome exibido na aba do navegador. -->
+    <title>Entre Linhas</title>
+
+    <!-- Carrega a folha principal, que importa os estilos da tela de entrada. -->
+    <link rel="stylesheet" href="src/css/main.css">
+</head>
+<body class="pagina-entrada">
+    <!-- Tela de entrada: intro é o contêiner e intro__video identifica seu vídeo no CSS. -->
+    <main class="intro" aria-label="Apresentação do Entre Linhas">
+        <!--
+            autoplay solicita o início automático; o navegador ainda pode bloquear a reprodução.
+            muted inicia sem som, permitindo autoplay nos navegadores que exigem áudio silenciado.
+            playsinline mantém o vídeo dentro da página em dispositivos móveis.
+            Sem loop, o vídeo é reproduzido uma vez e permanece no último quadro ao terminar.
+        -->
+        <video
+            class="intro__video"
+            aria-label="Vídeo de introdução do Entre Linhas"
+            autoplay
+            muted
+            playsinline
+        >
+            <!-- Arquivo da introdução, com caminho relativo ao index.html e formato MP4. -->
+            <source src="assets/videos/intro-celular.mp4" type="video/mp4">
+
+            <!-- Alternativa para navegadores que não oferecem suporte ao elemento video. -->
+            Seu navegador não suporta vídeos em HTML5.
+            <a href="assets/videos/intro-celular.mp4">Abrir o vídeo de introdução.</a>
+        </video>
+        <!-- Navegação manual preserva a introdução e funciona sem JavaScript. -->
+        <a class="intro__continuar" href="src/pages/boas-vindas.html">Continuar →</a>
+    </main>
+</body>
+</html>

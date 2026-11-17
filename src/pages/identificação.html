@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C0B2D">
+    <title>Identificação | Entre Linhas</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="pagina-identificacao">
+    <main class="identificação" aria-labelledby="titulo-identificação">
+        <header class="cabecalho-logo">
+            <img class="logo" src="../../assets/logo/logo.png"
+                alt="Núcleo de Gênero e Diversidade Sexual" width="64" height="64">
+        </header>
+
+        <section class="identificação__conteudo" aria-labelledby="titulo-identificação">
+            <h1 class="identificação__titulo" id="titulo-identificação">Antes de começar...</h1>
+            <p class="identificação__mensagem">Como você quer ser chamado nesta jornada?</p>
+
+            <form class="identificação__formulario">
+                <label class="identificação__rotulo" for="nome">Nome social ou apelido</label>
+                <input class="identificação__campo" type="text" id="nome" name="nome"
+                    placeholder="Nome social ou apelido *" autocomplete="nickname"
+                    aria-describedby="aviso-prototipo">
+                <p class="identificação__aviso" id="aviso-prototipo">
+                    Campos ilustrativos neste protótipo.<br>
+                    Explore a jornada como visitante.
+                </p>
+                
+                <!-- Botão visual do protótipo; o destino da jornada ainda será definido. -->
+                <button type="button">Continuar como visitante <span aria-hidden="true">→</span></button>
+            </form>
+        </section>
+
+        <footer class="rodape" aria-hidden="true">
+            <img class="rodape__ondas" src="../../assets/illustrations/rodapé.png" alt="" width="402" height="100">
+        </footer>
+    </main>
+    
+</body>
+</html>

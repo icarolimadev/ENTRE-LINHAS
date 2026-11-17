@@ -1,0 +1,17 @@
+/*
+ * Rodapé compartilhado, sem sobrepor o conteúdo.
+ * Para ficar ao final da tela, o elemento pai deve usar display: flex,
+ * flex-direction: column e min-height: 100dvh (com fallback 100vh).
+ */
+.rodape {
+    margin-top: auto;
+    padding-top: 56px;
+}
+
+/* A arte decorativa acompanha a largura disponível em qualquer página. */
+.rodape__ondas {
+    display: block;
+    width: 100%;
+    height: clamp(80px, 25vw, 140px);
+    object-fit: fill;
+}

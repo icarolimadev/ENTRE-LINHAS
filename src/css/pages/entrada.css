@@ -1,0 +1,43 @@
+/* Tela de entrada: base da página, área visível e apresentação do vídeo. */
+
+/* Restringe o fundo preto e o bloqueio de rolagem à página da introdução. */
+.pagina-entrada {
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* Ocupa a tela; dvh acompanha a área visível quando as barras do celular mudam. */
+.intro {
+    width: 100%;
+    height: 100vh; /* Alternativa para navegadores sem suporte a dvh. */
+    height: 100dvh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/*
+ * O elemento ocupa a tela, mas contain preserva a imagem inteira sem distorção
+ * em celulares na vertical ou horizontal e nas demais telas.
+ * O espaço restante mostra o fundo preto, evitando cortes no conteúdo do vídeo.
+ */
+.intro__video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #000;
+}
+
+/* Acesso às boas-vindas, disponível mesmo se o navegador bloquear o vídeo. */
+.intro__continuar {
+    position: fixed;
+    right: max(20px, env(safe-area-inset-right));
+    bottom: max(20px, env(safe-area-inset-bottom));
+    padding: 12px 20px;
+    border: 1px solid #ffffff80;
+    border-radius: 999px;
+    background-color: #000c;
+    color: #fff;
+    text-decoration: none;
+}
