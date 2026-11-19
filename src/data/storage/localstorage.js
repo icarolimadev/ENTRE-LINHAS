@@ -1,3 +1,5 @@
+import { navegarPara } from '../../js/navigation/navigation.js';
+
 const chave = 'entreLinhas.apelido';
 const campoNome = document.querySelector('#nome');
 const formulario = campoNome?.form;
@@ -31,9 +33,11 @@ if (formulario) {
         // Entrar como visitante remove somente o nome salvo anteriormente.
         localStorage.removeItem(chave);
       }
-      window.location.href = './inicio.html';
     } catch {
       aviso.textContent = 'Não foi possível salvar o nome. Verifique se o armazenamento está permitido e tente novamente.';
+      return;
     }
+
+    navegarPara('inicio');
   });
 }
