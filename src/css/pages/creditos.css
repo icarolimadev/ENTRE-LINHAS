@@ -1,0 +1,50 @@
+.pagina-creditos {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+}
+
+.creditos {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.creditos__conteudo {
+    width: min(100%, 440px);
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.creditos__titulo {
+    margin: 20px 0;
+    font-size: clamp(1.375rem, 6.8vw, var(--tamanho-titulo));
+    letter-spacing: -0.025em;
+}
+
+.creditos__cards {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.creditos__card {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--superficie);
+}
+
+.creditos__titulo-card {
+    margin: 0 0 10px;
+    color: var(--destaque);
+}
+
+.creditos__descricao {
+    margin: 0;
+}
+
+@media (max-width: 359px) {
+    .creditos__conteudo {
+        padding-inline: 20px;
+    }
+}
