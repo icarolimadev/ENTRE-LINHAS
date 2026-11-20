@@ -81,6 +81,7 @@ export async function inicializarHistoria() {
             alvo.before(aviso);
         }
         aviso.setAttribute('role', erro ? 'alert' : 'status');
+        aviso.tabIndex = -1;
         aviso.replaceChildren();
         const texto = document.createElement('p');
         texto.textContent = mensagem;
@@ -91,6 +92,12 @@ export async function inicializarHistoria() {
             tentar.textContent = 'Tentar novamente';
             tentar.addEventListener('click', () => window.location.reload());
             aviso.append(tentar);
+            const voltar = document.createElement('a');
+            voltar.className = 'botao';
+            voltar.href = new URL('../pages/inicio.html', import.meta.url).href;
+            voltar.textContent = 'Voltar ao início';
+            aviso.append(voltar);
+            aviso.focus();
         }
     }
 
@@ -121,9 +128,19 @@ export async function inicializarHistoria() {
 
     bloquear(true);
     try {
-        const resposta = await fetch(fonteHistorias, { cache: 'no-cache' });
-        if (!resposta.ok) throw new Error('Não foi possível carregar as histórias. Tente novamente.');
-        historias = validarBiblioteca(await resposta.json());
+        const controle = new AbortController();
+        const limite = window.setTimeout(() => controle.abort(), 15000);
+        let dados;
+        try {
+            const resposta = await fetch(fonteHistorias, { cache: 'no-cache', signal: controle.signal });
+            if (!resposta.ok) throw new Error('Resposta HTTP inválida.');
+            dados = await resposta.json();
+        } catch {
+            throw new Error('Não foi possível carregar as histórias. Verifique sua conexão e tente novamente.');
+        } finally {
+            window.clearTimeout(limite);
+        }
+        historias = validarBiblioteca(dados);
         if (previa) {
             const { historia, indice, total } = selecionarHistoria({ historias }, parametros.get('historia') || tela.dataset.historiaId);
             const opcaoId = parametros.get('opcao');
@@ -139,7 +156,7 @@ export async function inicializarHistoria() {
         if (leitura.recuperado) avisar('O progresso anterior não é compatível com as histórias atuais. Uma nova jornada será iniciada.');
 
         if (iniciar) {
-            iniciar.innerHTML = '';
+            iniciar.replaceChildren();
             iniciar.append(document.createTextNode(rodada && rodada.fase !== 'concluida' ? 'Continuar jornada ' : 'Jogar agora '));
             const seta = document.createElement('span');
             seta.setAttribute('aria-hidden', 'true');
@@ -163,6 +180,12 @@ export async function inicializarHistoria() {
             }
         }
         bloquear(false);
+        // Anuncia o conteúdo carregado sem roubar foco de quem já está interagindo.
+        const titulo = document.querySelector('[data-historia-conteudo] h1');
+        if (titulo && document.activeElement === document.body) {
+            titulo.tabIndex = -1;
+            titulo.focus({ preventScroll: true });
+        }
     } catch (erro) { falhar(erro); return; }
 
     document.addEventListener('click', (evento) => {

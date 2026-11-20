@@ -1,5 +1,5 @@
 // Executar com servidor local em 8765 e Chrome de teste com depuração em 9222.
-// Use um perfil de navegador separado: este teste limpa somente a chave de progresso.
+// Use um perfil de navegador separado: estes testes alteram o apelido e a jornada.
 import assert from 'node:assert/strict';
 const base = process.env.TEST_BASE_URL || 'http://127.0.0.1:8765/';
 const tabs = await (await fetch('http://127.0.0.1:9222/json')).json();
@@ -43,7 +43,7 @@ function ok(nome) { casos++; console.log(`OK ${casos}: ${nome}`); }
 try {
     await call('Page.enable'); await call('Runtime.enable'); await call('Network.enable');
     await call('Network.setCacheDisabled', { cacheDisabled: true });
-    await call('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
+    await call('Emulation.setDeviceMetricsOverride', { width: Number(process.env.TEST_WIDTH || 390), height: Number(process.env.TEST_HEIGHT || 844), deviceScaleFactor: 1, mobile: process.env.TEST_MOBILE !== 'false' });
     await ir('src/pages/inicio.html'); await inicioPronto();
     await avaliar(`localStorage.removeItem('entreLinhas.jornada.v1');localStorage.setItem('entreLinhas.apelido','Teste');`);
     await ir('src/pages/inicio.html'); await inicioPronto();

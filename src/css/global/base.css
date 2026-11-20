@@ -5,6 +5,7 @@
 
 body {
     margin: 0;
+    overflow-wrap: anywhere;
 }
 
 /* Imagens permanecem dentro do espaço disponível, sem perder suas proporções. */
@@ -15,7 +16,18 @@ img {
 }
 
 /* Foco visível para quem navega usando teclado. */
-:where(a, button):focus-visible {
+:where(a, button, input, summary):focus-visible {
     outline: 3px solid var(--destaque);
     outline-offset: 5px;
+}
+
+/* Mantém atributos de estado efetivos mesmo em componentes com display próprio. */
+[hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }

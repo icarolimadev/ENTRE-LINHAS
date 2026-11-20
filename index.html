@@ -16,7 +16,7 @@
     <!-- Tela de entrada: intro é o contêiner e intro__video identifica seu vídeo no CSS. -->
     <main class="intro" aria-label="Apresentação do Entre Linhas">
         <!--
-            autoplay solicita o início automático; o navegador ainda pode bloquear a reprodução.
+            O JavaScript inicia o vídeo somente sem preferência por movimento reduzido.
             muted inicia sem som, permitindo autoplay nos navegadores que exigem áudio silenciado.
             playsinline mantém o vídeo dentro da página em dispositivos móveis.
             Sem loop, o término do vídeo abre automaticamente as boas-vindas.
@@ -24,9 +24,10 @@
         <video
             class="intro__video"
             aria-label="Vídeo de introdução do Entre Linhas"
-            autoplay
             muted
             playsinline
+            controls
+            preload="metadata"
         >
             <!-- Arquivo da introdução, com caminho relativo ao index.html e formato MP4. -->
             <source src="assets/videos/intro-celular.mp4" type="video/mp4">
@@ -35,6 +36,7 @@
             Seu navegador não suporta vídeos em HTML5.
             <a href="assets/videos/intro-celular.mp4">Abrir o vídeo de introdução.</a>
         </video>
+        <a class="intro__continuar" href="src/pages/boas-vindas.html" data-rota="boasVindas">Pular introdução</a>
     </main>
     <script type="module" src="src/js/main.js"></script>
 </body>

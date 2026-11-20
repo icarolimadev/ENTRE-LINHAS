@@ -20,3 +20,9 @@ button:disabled {
     outline: 2px solid var(--destaque);
     outline-offset: 2px;
 }
+
+.privacidade { margin-top: 20px; color: var(--texto-secundario); }
+.privacidade summary { min-height: 44px; padding-block: 10px; cursor: pointer; }
+.privacidade p { font-size: 0.875rem; }
+
+.jogo__aviso .botao { margin-top: 12px; }

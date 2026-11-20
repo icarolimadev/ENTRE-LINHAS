@@ -43,8 +43,8 @@ try {
     await call('Network.enable'); await call('Network.setCacheDisabled', { cacheDisabled: true });
     await call('Page.navigate', { url: new URL('src/pages/inicio.html', base).href });
     await pausa(500);
-    for (const [width, height] of [[320, 568], [390, 844]]) {
-        await call('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: true });
+    for (const [width, height] of [[320, 568], [390, 844], [1366, 768]]) {
+        await call('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: width < 900 });
         for (const historia of historias) {
             for (const opcaoId of [null, 'a', 'b', 'c']) {
                 const tipo = opcaoId ? 'reflexao' : 'historia';

@@ -2,6 +2,7 @@ import { navegarPara } from '../../js/navigation/navigation.js';
 
 export function inicializarFormulario() {
 const chave = 'entreLinhas.apelido';
+const limite = 40;
 const campoNome = document.querySelector('#nome');
 const formulario = campoNome?.form;
 const aviso = document.querySelector('#aviso-prototipo');
@@ -10,7 +11,7 @@ const tituloInicio = document.querySelector('#titulo-inicio');
 // Recupera o nome sem sobrescrever o que já está salvo.
 let apelidoSalvo = '';
 try {
-  apelidoSalvo = localStorage.getItem(chave) || '';
+  apelidoSalvo = (localStorage.getItem(chave) || '').trim().slice(0, limite);
 } catch {
   if (aviso) aviso.textContent = 'O armazenamento está indisponível neste navegador.';
 }
@@ -22,10 +23,22 @@ if (tituloInicio) {
   tituloInicio.textContent = `Olá, ${apelidoSalvo || 'visitante'}!`;
 }
 
+if (campoNome) campoNome.addEventListener('input', () => {
+  campoNome.setCustomValidity('');
+  campoNome.removeAttribute('aria-invalid');
+});
+
 if (formulario) {
   formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
     const apelido = campoNome.value.trim();
+
+    if (apelido.length > limite) {
+      campoNome.setCustomValidity('Use até 40 caracteres para o apelido.');
+      campoNome.setAttribute('aria-invalid', 'true');
+      campoNome.reportValidity();
+      return;
+    }
 
     try {
       if (apelido) {

@@ -92,7 +92,7 @@ const videosInicializados = new WeakSet();
 
     const monitor = window.setInterval(() => {
       // Abas ocultas podem ter reprodução e temporizadores suspensos.
-      if (document.hidden) {
+      if (document.hidden || video.paused) {
         ultimoProgresso = Date.now();
         ultimoTempo = video.currentTime;
         return;
@@ -100,7 +100,7 @@ const videosInicializados = new WeakSet();
       if (video.currentTime > ultimoTempo) {
         ultimoTempo = video.currentTime;
         ultimoProgresso = Date.now();
-      } else if (Date.now() - ultimoProgresso >= LIMITE_SEM_PROGRESSO_MS) {
+      } else if (!video.paused && Date.now() - ultimoProgresso >= LIMITE_SEM_PROGRESSO_MS) {
         tratarFalha();
       }
     }, 1000);
@@ -131,12 +131,24 @@ const videosInicializados = new WeakSet();
       }
       // A rejeição inclui bloqueios de reprodução automática.
       const reproducao = video.play();
-      if (reproducao) reproducao.catch(tratarFalha);
+      if (reproducao) reproducao.catch((erro) => {
+        // Pausar enquanto play() ainda está pendente é uma ação válida, não uma falha.
+        if (erro.name === 'AbortError' && video.paused) return;
+        tratarFalha(erro);
+      });
     } catch (erro) {
       tratarFalha(erro);
     }
   }
 
+  const movimentoReduzido = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (movimentoReduzido.matches) {
+    abrirBoasVindas();
+    return;
+  }
+  movimentoReduzido.addEventListener('change', (evento) => {
+    if (evento.matches) abrirBoasVindas();
+  });
   tentarReproduzir();
 }
 
