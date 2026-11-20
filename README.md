@@ -107,13 +107,10 @@ As histórias abordam temas como divisão de tarefas, reconhecimento profissiona
 | Arquivo | Papel no projeto |
 | :--- | :--- |
 | [historias.json](src/data/historias.json) | Biblioteca carregada pelo jogo: **30 histórias e 90 consequências**. |
-| [historias.md](docs/historias.md) | Texto de origem das 30 adaptações atuais. |
-| [historias2.md](docs/historias2.md) | Proposta adicional de conteúdo; **ainda não integrada** à biblioteca ativa. |
-| [historias-prototipo.json](docs/arquivo/historias-prototipo.json) | Cópia dos cinco exemplos usados no início do protótipo. |
 
 Os textos fornecidos com apoio de IA foram adaptados para uma linguagem mais direta e madura, com situações e alternativas resumidas para leitura em celular. Os retornos descrevem possibilidades e custos, sem prometer resultados certos.
 
-O campo `origem` preserva a relação com o documento de referência. O status **`em_revisao`** registra que adaptação editorial e funcionamento técnico não equivalem a aprovação pedagógica institucional. O status é informativo: as 30 histórias estão disponíveis no protótipo.
+O campo `origem` registra a referência editorial local, que não é necessária para executar o jogo. O status **`em_revisao`** registra que adaptação editorial e funcionamento técnico não equivalem a aprovação pedagógica institucional. O status é informativo: as 30 histórias estão disponíveis no protótipo.
 
 <details>
 <summary><strong>Como editar ou acrescentar uma história</strong></summary>
@@ -193,7 +190,6 @@ entre linhas/
 │       ├── jogo/               # Motor e persistência da rodada
 │       ├── historias.js        # Integração entre dados e interface
 │       └── main.js             # Entrada compartilhada
-├── docs/                       # Textos de referência e arquivos históricos
 └── tests/                      # Testes do motor, fluxo e biblioteca
 ```
 
@@ -211,7 +207,7 @@ A aplicação não envia essas escolhas a um backend. O progresso pertence ao na
 
 Limpar os dados do site remove o progresso. Alterar host ou porta também muda a origem de armazenamento. Se o navegador bloquear a persistência, o jogo informa o problema antes de avançar.
 
-As fontes são carregadas do Google Fonts, com alternativa local `sans-serif` quando indisponíveis.
+As fontes são carregadas do Google Fonts, com alternativa local `sans-serif` quando indisponíveis. A tela inicial contém informações de privacidade e uma ação para apagar somente o apelido e a jornada, mediante confirmação.
 
 </details>
 
@@ -237,10 +233,12 @@ As cores estão em [thames.css](src/css/global/thames.css), a tipografia em [typ
 | Camada | Cobertura |
 | :--- | :--- |
 | **13 testes do motor** | Biblioteca, sorteio, escolhas, revisão, conclusão, consequências e persistência. |
-| **15 cenários no Chrome** | Jornada completa, retomada, novas rodadas, histórico, prévias e tratamento de falhas. |
-| **240 verificações da biblioteca** | 30 situações e 90 consequências em **320 × 568** e **390 × 844**. |
+| **15 cenários no Chrome por viewport** | Jornada completa, retomada, novas rodadas, histórico, prévias e falhas em 390 × 844 e 1366 × 768. |
+| **360 verificações da biblioteca** | 30 situações e 90 consequências em **320 × 568**, **390 × 844** e **1366 × 768**. |
+| **105 verificações de interface** | Seis resoluções, texto a 200%, teclado, contraste, movimento reduzido e privacidade. |
+| **8 cenários adicionais de falha e navegação** | HTTP, JSON, timeout, quota, recuperação, ajuda, créditos e fontes indisponíveis. |
 
-Essas verificações passaram na integração da biblioteca atual. Os resultados descrevem testes locais; não representam uma certificação de acessibilidade ou testes em todos os aparelhos.
+Essas verificações passaram na revisão de QA de 20/11/2026. Os resultados descrevem testes locais; não representam uma certificação de acessibilidade ou testes em todos os aparelhos.
 
 ### Testar a lógica
 
@@ -306,3 +304,13 @@ Escolhas que convidam à escuta. Reflexões que acompanham a convivência.
 <img src="assets/illustrations/rodapé.png" alt="" width="720">
 
 </div>
+
+## Segurança e arquivos locais
+
+O repositório contém a aplicação, os testes e a configuração da hospedagem.
+Rascunhos, relatórios e evidências geradas ficam em `docs/`, ignorado pelo Git.
+Os testes que geram resultados criam essa pasta automaticamente.
+Nunca inclua credenciais no código do cliente: os arquivos usados pelo navegador são públicos.
+
+`vercel.json` configura CSP e cabeçalhos de segurança; `.vercelignore` limita os arquivos enviados para hospedagem.
+Após publicar, confirme os cabeçalhos no domínio real e revise 2FA e proteção dos previews no painel da Vercel.

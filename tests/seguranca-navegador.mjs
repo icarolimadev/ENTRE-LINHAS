@@ -78,6 +78,7 @@ try {
     }
     ok('cabeçalhos e MIME locais corretos para HTML, JS, JSON e vídeo');
     assert.deepEqual(erros,[]);
+    fs.mkdirSync('docs/qa-evidencias', { recursive: true });
     fs.writeFileSync('docs/qa-evidencias/seguranca-navegador.json',JSON.stringify({ambiente:base,resultados,recursos:rede,erros,limite:'Cabeçalhos servidos localmente; não prova configuração do domínio Vercel.'},null,2));
 } finally {
     await call('Page.setBypassCSP',{enabled:false});

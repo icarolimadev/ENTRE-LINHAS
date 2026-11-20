@@ -1,0 +1,31 @@
+# Material de trabalho e evidências: somente local.
+/docs/
+/src/js/storage/
+
+# Credenciais e configurações privadas.
+.env
+.env.*
+**/.env
+**/.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+.aws/
+.codex/
+.agents/
+.vercel/
+
+# Dependências, saídas e arquivos locais.
+node_modules/
+dist/
+coverage/
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -47,5 +47,6 @@ try {
     casos.push('fontes externas indisponíveis mantêm conteúdo e ações utilizáveis');
     assert.deepEqual(erros,[]);
     console.log(JSON.stringify({casos,erros},null,2));
+    fs.mkdirSync('docs/qa-evidencias', { recursive: true });
     fs.writeFileSync('docs/qa-evidencias/falhas.json',JSON.stringify({casos,erros},null,2));
 } finally { ws.close(); }
