@@ -1,0 +1,13 @@
+# Publica somente a aplicação estática e sua configuração.
+/*
+!/index.html
+!/src
+!/assets
+!/vercel.json
+
+# Arquivo vazio não utilizado e artefatos que não pertencem ao cliente.
+/src/js/storage
+**/*.map
+**/.env*
+**/*.pem
+**/*.key
