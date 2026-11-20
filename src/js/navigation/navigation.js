@@ -19,6 +19,8 @@
   comoFuciona: 'src/pages/comoFuciona.html',
   creditos: 'src/pages/creditos.html',
   historia1: 'src/pages/historia1.html',
+  reflexao1: 'src/pages/reflexao1.html',
+  conclusao: 'src/pages/conclusao.html',
 });
 
 // ============================================================
@@ -153,10 +155,11 @@ function obterUrlRota(nomeRota) {
 }
 
 // Use substituir apenas quando a página atual não deve ficar no histórico.
-export function navegarPara(nomeRota, { substituir = false } = {}) {
+export function navegarPara(nomeRota, { substituir = false, parametros = {} } = {}) {
   if (navegacaoEmAndamento) return false;
   try {
-    const destino = obterUrlRota(nomeRota);
+    const destino = new URL(obterUrlRota(nomeRota));
+    for (const [chave, valor] of Object.entries(parametros)) destino.searchParams.set(chave, valor);
     navegacaoEmAndamento = true;
     limparErroNavegacao();
     if (substituir) window.location.replace(destino);

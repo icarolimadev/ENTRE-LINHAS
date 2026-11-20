@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C0B2D">
+    <title>Reflexão da História 1 | Entre Linhas</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="pagina-reflexao" data-tela-historia="reflexao" data-historia-id="historia-1">
+    <main class="reflexao" aria-labelledby="titulo-reflexao">
+        <header class="cabecalho-logo">
+            <img class="logo" src="../../assets/logo/logo.png"
+                alt="Núcleo de Gênero e Diversidade Sexual" width="64" height="64">
+        </header>
+
+        <p class="reflexao__conteudo" data-historia-aviso role="status">Carregando história…</p>
+        <section class="reflexao__conteudo" data-historia-conteudo hidden aria-labelledby="titulo-reflexao">
+            <h1 class="titulo reflexao__titulo" id="titulo-reflexao">Um momento<br>para refletir</h1>
+            <p class="legenda reflexao__etapa"></p>
+
+            <div class="reflexao__cards">
+                <section class="reflexao__card" aria-labelledby="titulo-impacto">
+                    <h2 class="titulo-card reflexao__titulo-card" id="titulo-impacto"></h2>
+                    <p class="reflexao__descricao"></p>
+                </section>
+
+                <section class="reflexao__card" aria-labelledby="titulo-refletir">
+                    <h2 class="titulo-card reflexao__titulo-card" id="titulo-refletir">Pense sobre isso</h2>
+                    <p class="reflexao__descricao"></p>
+                </section>
+            </div>
+
+            <!-- O motor salva a etapa antes de navegar. -->
+            <div class="reflexao__acoes">
+                <button type="button" data-acao="proxima-historia"><span data-proxima-rotulo>Próxima história</span> <span class="icon icon-arrow-right reflexao__seta" aria-hidden="true"></span></button>
+                <button type="button" data-acao="rever-historia">Rever a situação</button>
+            </div>
+        </section>
+
+        <footer class="rodape" aria-hidden="true">
+            <img class="rodape__ondas" src="../../assets/illustrations/rodapé.png"
+                alt="" width="402" height="100">
+        </footer>
+    </main>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

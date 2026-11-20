@@ -1,0 +1,128 @@
+.pagina-reflexao {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    overflow: hidden;
+}
+
+.reflexao {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100svh;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+}
+
+/* Compacta apenas esta tela, preservando os componentes das demais páginas. */
+.reflexao > .cabecalho-logo {
+    flex-shrink: 0;
+    padding-top: max(12px, env(safe-area-inset-top));
+    padding-bottom: 12px;
+}
+
+.reflexao .logo {
+    width: 44px;
+    height: 44px;
+}
+
+.reflexao__conteudo {
+    width: min(100%, 440px);
+    margin-inline: auto;
+    padding-inline: 24px;
+    flex-shrink: 0;
+}
+
+.reflexao__titulo {
+    margin: 8px 0 12px;
+    font-size: clamp(1.5rem, 3.6svh, var(--tamanho-titulo));
+    letter-spacing: -0.025em;
+}
+
+.reflexao__etapa {
+    margin: 0 0 12px;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--destaque);
+}
+
+.reflexao__cards {
+    display: grid;
+    gap: 12px;
+}
+
+.reflexao__card {
+    padding: 16px;
+    border-radius: 20px;
+    background-color: var(--superficie);
+}
+
+.reflexao__titulo-card {
+    margin: 0 0 6px;
+    color: var(--destaque);
+}
+
+.reflexao__descricao {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.4;
+}
+
+.reflexao__acoes {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.reflexao__acoes button {
+    min-height: 44px;
+    padding-block: 10px;
+}
+
+.reflexao > .rodape {
+    flex-shrink: 0;
+    padding-top: 16px;
+}
+
+.reflexao .rodape__ondas {
+    height: clamp(40px, 8svh, 72px);
+}
+
+/* Telas baixas recebem espaçamentos menores, sem ocultar textos ou ações. */
+@media (max-height: 640px) {
+    .reflexao > .rodape { padding-top: 8px; }
+    .reflexao__titulo { margin-block: 4px 8px; }
+    .reflexao__etapa { margin-bottom: 8px; }
+    .reflexao > .cabecalho-logo {
+        padding-bottom: 4px;
+    }
+
+    .reflexao .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .reflexao__card {
+        padding: 12px;
+    }
+
+    .reflexao__titulo-card {
+        font-size: 1rem;
+    }
+
+    .reflexao__cards,
+    .reflexao__acoes {
+        gap: 8px;
+    }
+}
+
+.reflexao__seta {
+    --icon-size: 16px;
+    color: inherit;
+}
+
+@media (max-width: 359px) {
+    .reflexao__conteudo {
+        padding-inline: 20px;
+    }
+}

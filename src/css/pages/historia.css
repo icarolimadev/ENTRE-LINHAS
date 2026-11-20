@@ -1,16 +1,40 @@
 .pagina-historia {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
+    overflow: hidden;
 }
 
 .historia {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100svh;
+    overflow-y: auto;
+    overscroll-behavior-y: none;
+}
+
+.historia > .cabecalho-logo {
+    flex-shrink: 0;
+    padding-top: max(12px, env(safe-area-inset-top));
+    padding-bottom: 12px;
+}
+
+.historia .logo {
+    width: 44px;
+    height: 44px;
+}
+
+.historia > .rodape {
+    flex-shrink: 0;
+    padding-top: 16px;
+}
+
+.historia .rodape__ondas {
+    height: clamp(40px, 8svh, 72px);
 }
 
 .historia__conteudo {
+    flex-shrink: 0;
     width: min(100%, 440px);
     margin-inline: auto;
     padding-inline: 24px;
@@ -48,13 +72,13 @@
 }
 
 .historia__titulo {
-    margin: 20px 0;
+    margin: 12px 0;
     font-size: clamp(1.375rem, 6.8vw, var(--tamanho-titulo));
     letter-spacing: -0.025em;
 }
 
 .historia__card {
-    padding: 20px;
+    padding: 16px;
     border-radius: 20px;
     background-color: var(--superficie);
 }
@@ -66,17 +90,36 @@
 
 .historia__descricao {
     margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.4;
 }
 
 .historia__opcoes {
     display: grid;
-    gap: 16px;
-    margin-top: 16px;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.historia__opcoes button {
+    min-height: 44px;
+    padding-block: 10px;
 }
 
 .historia__orientacao {
     margin: 16px 0 0;
     color: var(--texto-secundario);
+}
+
+@media (max-height: 640px) {
+    .historia > .cabecalho-logo { padding-bottom: 4px; }
+    .historia .logo { width: 36px; height: 36px; }
+    .historia__titulo { margin-block: 8px; font-size: 1.5rem; }
+    .historia__card { padding: 12px; }
+    .historia__titulo-card { margin-bottom: 6px; font-size: 1rem; }
+    .historia__opcoes { gap: 8px; margin-top: 8px; }
+    .historia__opcoes button { padding: 8px 12px; font-size: 0.875rem; }
+    .historia__orientacao { margin-top: 8px; }
+    .historia > .rodape { padding-top: 8px; }
 }
 
 @media (max-width: 359px) {
