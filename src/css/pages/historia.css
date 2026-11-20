@@ -1,0 +1,86 @@
+.pagina-historia {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+}
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.historia__conteudo {
+    width: min(100%, 440px);
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.historia__progresso {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    color: var(--destaque);
+}
+
+.historia__etapa {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.historia__marcadores {
+    display: flex;
+    gap: 3px;
+}
+
+.historia__marcador {
+    width: 9px;
+    height: 9px;
+    border: 1px solid var(--contorno);
+    border-radius: 50%;
+}
+
+.historia__marcador--atual {
+    background-color: var(--destaque);
+}
+
+.historia__titulo {
+    margin: 20px 0;
+    font-size: clamp(1.375rem, 6.8vw, var(--tamanho-titulo));
+    letter-spacing: -0.025em;
+}
+
+.historia__card {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--superficie);
+}
+
+.historia__titulo-card {
+    margin: 0 0 10px;
+    color: var(--destaque);
+}
+
+.historia__descricao {
+    margin: 0;
+}
+
+.historia__opcoes {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.historia__orientacao {
+    margin: 16px 0 0;
+    color: var(--texto-secundario);
+}
+
+@media (max-width: 359px) {
+    .historia__conteudo {
+        padding-inline: 20px;
+    }
+}
