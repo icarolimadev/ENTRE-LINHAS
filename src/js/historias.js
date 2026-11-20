@@ -19,12 +19,13 @@ function mostrarHistoria(tela, historia, indice, total, resposta, previa) {
     if (tela.dataset.telaHistoria === 'historia') {
         document.title = `${historia.titulo} | Entre Linhas`;
         preencher('#titulo-historia', historia.titulo);
-        preencher('.historia__etapa', `História ${indice + 1} de ${total}`);
+        preencher('.historia__etapa', previa ? `Biblioteca · ${indice + 1} de ${total}` : `História ${indice + 1} de ${total}`);
         preencher('#titulo-pergunta', historia.pergunta);
         preencher('.historia__descricao', historia.situacao);
         const marcadores = tela.querySelector('.historia__marcadores');
         marcadores.replaceChildren();
-        for (let i = 0; i < total; i++) {
+        marcadores.hidden = previa;
+        for (let i = 0; !previa && i < total; i++) {
             const marcador = document.createElement('span');
             marcador.className = 'historia__marcador' + (i <= indice ? ' historia__marcador--atual' : '');
             marcadores.append(marcador);
@@ -125,7 +126,9 @@ export async function inicializarHistoria() {
         historias = validarBiblioteca(await resposta.json());
         if (previa) {
             const { historia, indice, total } = selecionarHistoria({ historias }, parametros.get('historia') || tela.dataset.historiaId);
-            mostrarHistoria(tela, historia, indice, total, null, true);
+            const opcaoId = parametros.get('opcao');
+            if (opcaoId && !historia.opcoes.some((opcao) => opcao.id === opcaoId)) throw new Error('Alternativa não encontrada.');
+            mostrarHistoria(tela, historia, indice, total, opcaoId ? { opcaoId } : null, true);
             avisar('Prévia para revisão. Para jogar e salvar suas escolhas, comece pela tela inicial.');
             return;
         }

@@ -91,19 +91,21 @@
 /* Telas baixas recebem espaçamentos menores, sem ocultar textos ou ações. */
 @media (max-height: 640px) {
     .reflexao > .rodape { padding-top: 8px; }
-    .reflexao__titulo { margin-block: 4px 8px; }
-    .reflexao__etapa { margin-bottom: 8px; }
+    .reflexao__titulo { margin-block: 2px 6px; }
+    .reflexao__etapa { margin-bottom: 6px; }
+    .reflexao .rodape__ondas { height: 32px; }
     .reflexao > .cabecalho-logo {
+        padding-top: max(8px, env(safe-area-inset-top));
         padding-bottom: 4px;
     }
 
     .reflexao .logo {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
     }
 
     .reflexao__card {
-        padding: 12px;
+        padding: 10px;
     }
 
     .reflexao__titulo-card {

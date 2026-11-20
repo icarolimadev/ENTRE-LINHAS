@@ -111,15 +111,16 @@
 }
 
 @media (max-height: 640px) {
-    .historia > .cabecalho-logo { padding-bottom: 4px; }
-    .historia .logo { width: 36px; height: 36px; }
-    .historia__titulo { margin-block: 8px; font-size: 1.5rem; }
-    .historia__card { padding: 12px; }
+    .historia > .cabecalho-logo { padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: 4px; }
+    .historia .logo { width: 32px; height: 32px; }
+    .historia__titulo { margin-block: 6px; font-size: 1.5rem; }
+    .historia__card { padding: 10px; }
     .historia__titulo-card { margin-bottom: 6px; font-size: 1rem; }
     .historia__opcoes { gap: 8px; margin-top: 8px; }
-    .historia__opcoes button { padding: 8px 12px; font-size: 0.875rem; }
+    .historia__opcoes button { padding: 8px 10px; font-size: 0.875rem; line-height: 1.4; }
     .historia__orientacao { margin-top: 8px; }
     .historia > .rodape { padding-top: 8px; }
+    .historia .rodape__ondas { height: 32px; }
 }
 
 @media (max-width: 359px) {

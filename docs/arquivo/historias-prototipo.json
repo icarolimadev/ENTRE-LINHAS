@@ -1,0 +1,134 @@
+{
+  "historias": [
+    {
+      "id": "historia-1",
+      "status": "rascunho",
+      "titulo": "Além das aparências",
+      "situacao": "Um colega vira alvo de piadas por usar roupas e se expressar de forma diferente do esperado. O que você faria?",
+      "pergunta": "O que você faria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Ignoraria para evitar confusão."
+        },
+        {
+          "id": "b",
+          "texto": "Interromperia as piadas e daria apoio."
+        },
+        {
+          "id": "c",
+          "texto": "Conversaria depois, em particular."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada atitude tem impacto",
+        "texto": "Interromper a piada com respeito e oferecer apoio ajuda a tornar a turma mais acolhedora.",
+        "pergunta": "Como apoiar sem falar pela outra pessoa?"
+      }
+    },
+    {
+      "id": "historia-2",
+      "status": "rascunho",
+      "titulo": "Um nome, uma identidade",
+      "situacao": "Uma estudante pede para ser chamada pelo nome social. Alguém insiste em usar seu nome anterior. Como agir?",
+      "pergunta": "O que você faria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Usaria o nome que ela pediu."
+        },
+        {
+          "id": "b",
+          "texto": "Diria que é só uma brincadeira."
+        },
+        {
+          "id": "c",
+          "texto": "Esperaria outra pessoa resolver."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada atitude tem impacto",
+        "texto": "Usar o nome que a pessoa apresenta é uma atitude de respeito. Se errar, corrija e siga a conversa.",
+        "pergunta": "O que um nome representa para uma pessoa?"
+      }
+    },
+    {
+      "id": "historia-3",
+      "status": "rascunho",
+      "titulo": "Talento não tem gênero",
+      "situacao": "No evento da turma, dizem que meninas devem decorar e meninos cuidar da tecnologia. Como agir?",
+      "pergunta": "O que você faria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Aceitaria para terminar rápido."
+        },
+        {
+          "id": "b",
+          "texto": "Dividiria por interesse e habilidade."
+        },
+        {
+          "id": "c",
+          "texto": "Faria apenas a tarefa que me deram."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada atitude tem impacto",
+        "texto": "Habilidades não são definidas pelo gênero. Dar espaço às escolhas permite que todas as pessoas aprendam.",
+        "pergunta": "Quais oportunidades os estereótipos limitam?"
+      }
+    },
+    {
+      "id": "historia-4",
+      "status": "rascunho",
+      "titulo": "Respeito também online",
+      "situacao": "Alguém compartilha um meme ofensivo contra pessoas LGBTQIA+ no grupo. O que você faria?",
+      "pergunta": "O que você faria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Repassaria sem pensar."
+        },
+        {
+          "id": "b",
+          "texto": "Explicaria o impacto e pediria respeito."
+        },
+        {
+          "id": "c",
+          "texto": "Sairia sem comentar."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada atitude tem impacto",
+        "texto": "Humor também pode excluir. Questionar o conteúdo com cuidado e apoiar quem foi atingido ajuda a mudar a convivência.",
+        "pergunta": "Você pensa no impacto antes de compartilhar?"
+      }
+    },
+    {
+      "id": "historia-5",
+      "status": "rascunho",
+      "titulo": "Escutar e acolher",
+      "situacao": "Uma amizade conta que está descobrindo sua identidade e pede discrição. Como responder?",
+      "pergunta": "O que você faria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Contaria ao grupo."
+        },
+        {
+          "id": "b",
+          "texto": "Ouviria e respeitaria a privacidade."
+        },
+        {
+          "id": "c",
+          "texto": "Pressionaria por uma definição."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada atitude tem impacto",
+        "texto": "Acolher é ouvir sem pressionar, respeitar o tempo e preservar a privacidade de cada pessoa.",
+        "pergunta": "Como apoiar respeitando os limites de alguém?"
+      }
+    }
+  ]
+}

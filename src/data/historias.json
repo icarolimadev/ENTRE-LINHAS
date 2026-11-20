@@ -2,132 +2,992 @@
   "historias": [
     {
       "id": "historia-1",
-      "status": "rascunho",
-      "titulo": "Além das aparências",
-      "situacao": "Um colega vira alvo de piadas por usar roupas e se expressar de forma diferente do esperado. O que você faria?",
-      "pergunta": "O que você faria?",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 1
+      },
+      "titulo": "Divisão de tarefas",
+      "situacao": "Na equipe de robótica, Marina recebe o relatório e a decoração. Os colegas ficam com os circuitos. O líder justifica: “Você é mais caprichosa”.",
+      "pergunta": "Como você agiria?",
       "opcoes": [
         {
           "id": "a",
-          "texto": "Ignoraria para evitar confusão."
+          "texto": "Propor um rodízio de funções.",
+          "consequencia": "O rodízio pode ampliar o acesso às tarefas técnicas. A proposta exige negociação e pode encontrar resistência na equipe."
         },
         {
           "id": "b",
-          "texto": "Interromperia as piadas e daria apoio."
+          "texto": "Aceitar agora e negociar outra função depois.",
+          "consequencia": "Você reduz o atrito imediato e ganha tempo para negociar. A divisão, porém, pode se consolidar antes dessa conversa."
         },
         {
           "id": "c",
-          "texto": "Conversaria depois, em particular."
+          "texto": "Pedir para assumir parte do circuito.",
+          "consequencia": "Você reivindica experiência técnica agora. Pode enfrentar resistência e a cobrança de provar uma competência presumida nos colegas."
         }
       ],
       "reflexao": {
-        "titulo": "Cada atitude tem impacto",
-        "texto": "Interromper a piada com respeito e oferecer apoio ajuda a tornar a turma mais acolhedora.",
-        "pergunta": "Como apoiar sem falar pela outra pessoa?"
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Associar organização às mulheres e técnica aos homens restringe oportunidades antes de conhecer as habilidades de cada pessoa.",
+        "pergunta": "Como dividir tarefas sem presumir habilidades pelo gênero?"
       }
     },
     {
       "id": "historia-2",
-      "status": "rascunho",
-      "titulo": "Um nome, uma identidade",
-      "situacao": "Uma estudante pede para ser chamada pelo nome social. Alguém insiste em usar seu nome anterior. Como agir?",
-      "pergunta": "O que você faria?",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 2
+      },
+      "titulo": "Escolhas sob julgamento",
+      "situacao": "Davi quer participar do grupo de dança do campus. Colegas questionam sua masculinidade e fazem piadas. Ele considera desistir da inscrição.",
+      "pergunta": "Como você agiria?",
       "opcoes": [
         {
           "id": "a",
-          "texto": "Usaria o nome que ela pediu."
+          "texto": "Participar com apoio de um colega.",
+          "consequencia": "Ter companhia pode reduzir o isolamento. Se a hostilidade continuar, buscar apoio institucional exige decidir quanto da situação você quer expor."
         },
         {
           "id": "b",
-          "texto": "Diria que é só uma brincadeira."
+          "texto": "Dançar apenas fora do campus.",
+          "consequencia": "Você evita parte da exposição e mantém a atividade. O campus continua sendo um espaço onde precisa esconder esse interesse."
         },
         {
           "id": "c",
-          "texto": "Esperaria outra pessoa resolver."
+          "texto": "Inscrever-se mesmo sem apoio do grupo.",
+          "consequencia": "Você mantém sua escolha sem esperar aprovação. Isso não elimina a hostilidade e pode exigir uma rede de apoio ao longo do caminho."
         }
       ],
       "reflexao": {
-        "titulo": "Cada atitude tem impacto",
-        "texto": "Usar o nome que a pessoa apresenta é uma atitude de respeito. Se errar, corrija e siga a conversa.",
-        "pergunta": "O que um nome representa para uma pessoa?"
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Expectativas sobre masculinidade podem limitar interesses, convivência e expressão pessoal.",
+        "pergunta": "O que se perde quando o pertencimento exige esconder interesses?"
       }
     },
     {
       "id": "historia-3",
-      "status": "rascunho",
-      "titulo": "Talento não tem gênero",
-      "situacao": "No evento da turma, dizem que meninas devem decorar e meninos cuidar da tecnologia. Como agir?",
-      "pergunta": "O que você faria?",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 3
+      },
+      "titulo": "Silêncio no grupo",
+      "situacao": "Um meme ridiculariza um colega por ser afeminado. Após as risadas no grupo da turma, Pedro sai sem explicar. Júlia percebe o afastamento.",
+      "pergunta": "Como você agiria?",
       "opcoes": [
         {
           "id": "a",
-          "texto": "Aceitaria para terminar rápido."
+          "texto": "Procurar Pedro em particular.",
+          "consequencia": "A conversa pode oferecer acolhimento sem expô-lo. O comportamento do grupo, porém, pode continuar sem ser questionado."
         },
         {
           "id": "b",
-          "texto": "Dividiria por interesse e habilidade."
+          "texto": "Questionar o efeito da piada no grupo.",
+          "consequencia": "Você sinaliza um limite coletivo. Convém evitar falar por Pedro ou transformar sua vida em tema de discussão sem consentimento."
         },
         {
           "id": "c",
-          "texto": "Faria apenas a tarefa que me deram."
+          "texto": "Observar antes de se posicionar.",
+          "consequencia": "Você ganha tempo para entender o contexto. Enquanto isso, o silêncio pode ser interpretado como aceitação do que aconteceu."
         }
       ],
       "reflexao": {
-        "titulo": "Cada atitude tem impacto",
-        "texto": "Habilidades não são definidas pelo gênero. Dar espaço às escolhas permite que todas as pessoas aprendam.",
-        "pergunta": "Quais oportunidades os estereótipos limitam?"
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Uma piada pode reforçar exclusões mesmo quando quem ri não percebe o efeito sobre outras pessoas.",
+        "pergunta": "Como enfrentar a humilhação sem expor quem foi atingido?"
       }
     },
     {
       "id": "historia-4",
-      "status": "rascunho",
-      "titulo": "Respeito também online",
-      "situacao": "Alguém compartilha um meme ofensivo contra pessoas LGBTQIA+ no grupo. O que você faria?",
-      "pergunta": "O que você faria?",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 4
+      },
+      "titulo": "Acesso à prática",
+      "situacao": "Ana escolheu Agropecuária, apesar da pressão da família. Nas aulas práticas, o professor chama apenas os homens para operar os equipamentos.",
+      "pergunta": "Como você agiria?",
       "opcoes": [
         {
           "id": "a",
-          "texto": "Repassaria sem pensar."
+          "texto": "Mudar para um curso com menos resistência.",
+          "consequencia": "A mudança pode aliviar a pressão imediata. Também pode afastar você de um projeto profissional definido por interesse próprio."
         },
         {
           "id": "b",
-          "texto": "Explicaria o impacto e pediria respeito."
+          "texto": "Oferecer-se para operar os equipamentos.",
+          "consequencia": "Você busca experiência prática diretamente. Ter de reivindicar cada oportunidade pode gerar desgaste e não mudar a regra para as demais."
         },
         {
           "id": "c",
-          "texto": "Sairia sem comentar."
+          "texto": "Propor um rodízio nas atividades práticas.",
+          "consequencia": "Uma regra comum pode distribuir melhor o aprendizado. A mudança depende de diálogo e da disposição do professor para rever a prática."
         }
       ],
       "reflexao": {
-        "titulo": "Cada atitude tem impacto",
-        "texto": "Humor também pode excluir. Questionar o conteúdo com cuidado e apoiar quem foi atingido ajuda a mudar a convivência.",
-        "pergunta": "Você pensa no impacto antes de compartilhar?"
+        "titulo": "Cada escolha tem implicações",
+        "texto": "O acesso desigual à experiência pode ser confundido, depois, com diferença de capacidade.",
+        "pergunta": "Quem tem oportunidade de aprender antes de ser avaliado?"
       }
     },
     {
       "id": "historia-5",
-      "status": "rascunho",
-      "titulo": "Escutar e acolher",
-      "situacao": "Uma amizade conta que está descobrindo sua identidade e pede discrição. Como responder?",
-      "pergunta": "O que você faria?",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 5
+      },
+      "titulo": "Limites no estágio",
+      "situacao": "Rafael comenta repetidamente a roupa e o corpo de Bianca no estágio. Quando ela se incomoda, ele minimiza. Bianca passa a evitar o setor.",
+      "pergunta": "Como você agiria?",
       "opcoes": [
         {
           "id": "a",
-          "texto": "Contaria ao grupo."
+          "texto": "Dizer diretamente que os comentários incomodam.",
+          "consequencia": "Você explicita o limite no momento. A reação pode ser defensiva; o contexto e a segurança de Bianca precisam entrar nessa decisão."
         },
         {
           "id": "b",
-          "texto": "Ouviria e respeitaria a privacidade."
+          "texto": "Evitar o contato por enquanto.",
+          "consequencia": "O afastamento pode reduzir a exposição imediata. O custo recai sobre sua rotina, enquanto a conduta de Rafael permanece sem resposta."
         },
         {
           "id": "c",
-          "texto": "Pressionaria por uma definição."
+          "texto": "Registrar as falas e buscar orientação.",
+          "consequencia": "Anotações sobre o ocorrido podem ajudar a explicar a situação. Buscar apoio exige confiança no canal e pode envolver um processo desgastante."
         }
       ],
       "reflexao": {
-        "titulo": "Cada atitude tem impacto",
-        "texto": "Acolher é ouvir sem pressionar, respeitar o tempo e preservar a privacidade de cada pessoa.",
-        "pergunta": "Como apoiar respeitando os limites de alguém?"
+        "titulo": "Cada escolha tem implicações",
+        "texto": "O desconforto não deixa de existir porque alguém chama o comentário de elogio. Limites precisam ser respeitados.",
+        "pergunta": "Como oferecer apoio sem transferir a responsabilidade a Bianca?"
+      }
+    },
+    {
+      "id": "historia-6",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 6
+      },
+      "titulo": "Quem ocupa a quadra",
+      "situacao": "Na Educação Física, homens ficam com o futebol e mulheres com o vôlei. Letícia pede para jogar futebol, mas ouve que a partida é “pesada”.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Jogar futebol apenas fora da aula.",
+          "consequencia": "Você mantém a prática em outro espaço e evita o confronto. A restrição na aula continua limitando o acesso de quem quer participar."
+        },
+        {
+          "id": "b",
+          "texto": "Entrar na quadra com outras colegas.",
+          "consequencia": "A ação coletiva torna a exclusão visível. Pode haver confronto, por isso vale considerar apoio e condições de participação."
+        },
+        {
+          "id": "c",
+          "texto": "Propor equipes por experiência, não gênero.",
+          "consequencia": "Um critério ligado à prática pode ampliar a participação. A proposta exige negociação e acompanhamento para não criar outra exclusão."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Proteção presumida pode se tornar uma forma de impedir participação e aprendizado.",
+        "pergunta": "Que critérios tornam a prática esportiva acessível e segura?"
+      }
+    },
+    {
+      "id": "historia-7",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 7
+      },
+      "titulo": "Nome e exposição",
+      "situacao": "Théo é trans. Na chamada, o professor usa seu nome anterior diante da turma. Théo se sente exposto e precisa decidir como reagir.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Corrigir o nome durante a chamada.",
+          "consequencia": "Você informa como quer ser chamado imediatamente. A correção pública pode ampliar uma exposição que não escolheu."
+        },
+        {
+          "id": "b",
+          "texto": "Conversar com o professor em particular.",
+          "consequencia": "A conversa preserva mais sua privacidade. Ela não desfaz o constrangimento e depende de o combinado ser respeitado depois."
+        },
+        {
+          "id": "c",
+          "texto": "Pedir à coordenação que ajuste os registros.",
+          "consequencia": "Um ajuste institucional pode evitar repetidas explicações. O encaminhamento exige tempo e cuidado com quem terá acesso às informações."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Respeitar o nome de uma pessoa não deveria depender de ela se expor ou corrigir a instituição continuamente.",
+        "pergunta": "Como evitar que o respeito dependa de correções individuais?"
+      }
+    },
+    {
+      "id": "historia-8",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 8
+      },
+      "titulo": "Exemplos que ensinam",
+      "situacao": "Camila percebe que os exercícios mostram homens como engenheiros e mulheres nas tarefas domésticas. Ao comentar, dizem que ela exagera.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Sugerir novos exemplos ao professor.",
+          "consequencia": "Você oferece uma mudança concreta no material. A proposta pode ser acolhida ou tratada como uma questão sem importância."
+        },
+        {
+          "id": "b",
+          "texto": "Deixar o assunto de lado neste momento.",
+          "consequencia": "Você preserva energia para outras demandas. O padrão continua presente sem que seu efeito seja discutido."
+        },
+        {
+          "id": "c",
+          "texto": "Comparar os exemplos com a turma.",
+          "consequencia": "A comparação ajuda a tornar o padrão visível. A discussão precisa de cuidado para não se reduzir a deboche ou exposição pessoal."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Exemplos cotidianos também ensinam quem parece pertencer a cada profissão ou atividade.",
+        "pergunta": "Que possibilidades um material didático torna visíveis?"
+      }
+    },
+    {
+      "id": "historia-9",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 9
+      },
+      "titulo": "Identidade como ofensa",
+      "situacao": "Rafaela joga no time do campus. Por seu cabelo e suas roupas, colegas usam referências à orientação sexual para insultá-la. O apelido se espalha.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Buscar apoio do time e do NUGEDS.",
+          "consequencia": "Uma rede pode reduzir o isolamento e apoiar uma resposta coletiva. Rafaela deve participar da decisão sobre quanto tornar público."
+        },
+        {
+          "id": "b",
+          "texto": "Não responder e continuar jogando.",
+          "consequencia": "Você pode evitar alimentar uma provocação imediata. Isso não garante que os insultos parem ou deixem de afetar sua participação."
+        },
+        {
+          "id": "c",
+          "texto": "Estabelecer um limite diretamente.",
+          "consequencia": "Você recusa o tratamento no momento. A reação do grupo é incerta; considerar segurança e apoio não diminui a firmeza do limite."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Transformar orientação sexual em insulto reforça o preconceito, independentemente da identidade de quem é alvo.",
+        "pergunta": "Como interromper a ofensa sem exigir exposição de Rafaela?"
+      }
+    },
+    {
+      "id": "historia-10",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 10
+      },
+      "titulo": "Emoção em público",
+      "situacao": "Gustavo chora após perder um campeonato. Um colega grava e compartilha o vídeo com uma legenda que questiona sua masculinidade.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Rir junto para reduzir a tensão.",
+          "consequencia": "A reação pode aliviar a pressão naquele instante. Também pode esconder o incômodo e parecer autorização para novas exposições."
+        },
+        {
+          "id": "b",
+          "texto": "Pedir a retirada do vídeo e buscar apoio.",
+          "consequencia": "Você coloca o foco na exposição sem consentimento. A retirada pode exigir outros encaminhamentos e não elimina cópias já compartilhadas."
+        },
+        {
+          "id": "c",
+          "texto": "Conversar com alguém de confiança.",
+          "consequencia": "O apoio pode ajudar a lidar com o episódio e pensar nos próximos passos. Ele não interrompe, sozinho, a circulação do vídeo."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Tratar vulnerabilidade como falha de masculinidade restringe a expressão emocional e pode dificultar a busca por apoio.",
+        "pergunta": "Como acolher emoções sem transformar alguém em espetáculo?"
+      }
+    },
+    {
+      "id": "historia-11",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 11
+      },
+      "titulo": "Autoria interrompida",
+      "situacao": "Helena é interrompida várias vezes no seminário. Quando um colega repete sua proposta, recebe o elogio. Ela hesita em apontar o ocorrido.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Retomar a palavra e indicar sua contribuição.",
+          "consequencia": "Você recupera espaço e autoria naquele momento. Pode enfrentar resistência ou ser julgada pelo tom, em vez do conteúdo."
+        },
+        {
+          "id": "b",
+          "texto": "Combinar apoio entre colegas e conversar depois.",
+          "consequencia": "O grupo pode criar uma prática de reconhecer contribuições. Isso depende de compromisso e não repara automaticamente o episódio."
+        },
+        {
+          "id": "c",
+          "texto": "Anotar o ocorrido antes de se posicionar.",
+          "consequencia": "Você ganha tempo para avaliar se há um padrão. Enquanto isso, o reconhecimento da contribuição pode permanecer com outra pessoa."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Escuta e reconhecimento não são distribuídos igualmente em todos os grupos. Observar quem fala e quem recebe crédito ajuda a perceber isso.",
+        "pergunta": "Como reconhecer autoria sem deixar a reação só com Helena?"
+      }
+    },
+    {
+      "id": "historia-12",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 12
+      },
+      "titulo": "Permanência e maternidade",
+      "situacao": "Após anunciar a gravidez, Larissa enfrenta comentários sobre seu futuro. Entre as demandas do curso e o julgamento da turma, considera trancar.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Consultar os apoios disponíveis no campus.",
+          "consequencia": "Conhecer possibilidades ajuda a decidir com mais informação. A conversa exige exposição e não garante que todo apoio necessário esteja disponível."
+        },
+        {
+          "id": "b",
+          "texto": "Pausar o curso e planejar o retorno.",
+          "consequencia": "A pausa pode reduzir a sobrecarga imediata. Retomar pode exigir apoio financeiro, reorganização da rotina e continuidade do vínculo com o campus."
+        },
+        {
+          "id": "c",
+          "texto": "Seguir sem solicitar mudanças por enquanto.",
+          "consequencia": "Você preserva a rotina e decide quanto compartilhar. As demandas podem se acumular se as condições de estudo não forem discutidas."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Permanecer no curso envolve condições concretas de cuidado, renda e apoio, não apenas esforço individual.",
+        "pergunta": "Que condições permitem escolher sem pressão ou julgamento?"
+      }
+    },
+    {
+      "id": "historia-13",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 13
+      },
+      "titulo": "Segurança no cotidiano",
+      "situacao": "Bianca, uma mulher trans, evita o banheiro feminino após comentários hostis. Para não precisar usá-lo, reduz a água que bebe durante as aulas.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Continuar usando o banheiro e buscar companhia.",
+          "consequencia": "Ter companhia pode reduzir o isolamento. A hostilidade ainda precisa de resposta; o desgaste não deve ser tratado como obrigação de Bianca."
+        },
+        {
+          "id": "b",
+          "texto": "Pedir um plano de acolhimento à coordenação.",
+          "consequencia": "Um encaminhamento institucional pode ampliar a segurança. Enquanto a resposta é construída, é preciso considerar as necessidades imediatas."
+        },
+        {
+          "id": "c",
+          "texto": "Evitar o banheiro enquanto procura outra saída.",
+          "consequencia": "Você tenta evitar uma situação hostil. A restrição afeta necessidades básicas e não é uma solução sustentável para a convivência."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Quando uma necessidade cotidiana se torna fonte de medo, o problema exige condições de segurança e acolhimento.",
+        "pergunta": "Como a instituição pode agir sem deixar Bianca sozinha?"
+      }
+    },
+    {
+      "id": "historia-14",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 14
+      },
+      "titulo": "Exposição sem consentimento",
+      "situacao": "Depois de um término, uma imagem íntima de Nicole circula entre colegas. Os comentários culpam Nicole e quase não mencionam quem a compartilhou.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Buscar apoio sem repassar a imagem.",
+          "consequencia": "Uma pessoa de confiança pode ajudar a registrar o ocorrido e buscar orientação. Nicole deve participar das decisões sobre qualquer encaminhamento."
+        },
+        {
+          "id": "b",
+          "texto": "Responder publicamente aos comentários.",
+          "consequencia": "Você tenta contestar a narrativa sobre o episódio. A discussão pública também pode ampliar a exposição e atrair novas mensagens."
+        },
+        {
+          "id": "c",
+          "texto": "Afastar-se por um período.",
+          "consequencia": "O afastamento pode oferecer algum alívio. Também pode afetar os estudos e o acesso a apoio, sem interromper o compartilhamento."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Compartilhar intimidade sem consentimento causa violência. Responsabilizar quem foi exposto desvia o foco de quem divulgou.",
+        "pergunta": "Como apoiar Nicole sem ampliar a circulação da imagem?"
+      }
+    },
+    {
+      "id": "historia-15",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 15
+      },
+      "titulo": "Trabalho invisível",
+      "situacao": "Após a prática de laboratório, os homens saem e a limpeza fica com as mulheres. Sofia ouve que isso acontece porque elas são mais organizadas.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Sair também e deixar a divisão evidente.",
+          "consequencia": "A ausência do trabalho torna a desigualdade visível. Pode afetar a próxima atividade e gerar cobrança sem resolver a distribuição das tarefas."
+        },
+        {
+          "id": "b",
+          "texto": "Concluir a limpeza para não atrasar.",
+          "consequencia": "Você mantém o laboratório em condições de uso. A repetição pode consolidar uma responsabilidade que deveria ser compartilhada."
+        },
+        {
+          "id": "c",
+          "texto": "Propor uma escala com toda a equipe.",
+          "consequencia": "A escala torna o trabalho visível e distribui responsabilidades. Ela precisa de adesão e acompanhamento para funcionar na prática."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Organização e cuidado não são atribuições naturais de um gênero. São tarefas aprendidas e necessárias ao trabalho coletivo.",
+        "pergunta": "Quem assume as tarefas necessárias que quase não recebem crédito?"
+      }
+    },
+    {
+      "id": "historia-16",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 16
+      },
+      "titulo": "Crédito no projeto",
+      "situacao": "No hackathon, o jurado dirige as perguntas ao único homem da equipe. Isadora e as colegas desenvolveram a maior parte do projeto.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Explicar na hora a contribuição de cada pessoa.",
+          "consequencia": "Você torna a autoria visível durante a avaliação. A intervenção pode gerar tensão, sobretudo se o jurado não reconhecer a suposição inicial."
+        },
+        {
+          "id": "b",
+          "texto": "Conversar com a equipe depois da avaliação.",
+          "consequencia": "Você evita o atrito naquele momento e prepara uma resposta. A avaliação pode terminar sem reconhecer corretamente as contribuições."
+        },
+        {
+          "id": "c",
+          "texto": "Combinar que o colega redirecione as perguntas.",
+          "consequencia": "Um aliado pode redistribuir a palavra no momento. A estratégia depende de sua colaboração e não substitui mudanças em quem avalia."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Presumir liderança masculina pode apagar contribuições técnicas de outras pessoas.",
+        "pergunta": "Como distribuir a palavra e o crédito durante uma avaliação?"
+      }
+    },
+    {
+      "id": "historia-17",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 17
+      },
+      "titulo": "Critérios de liderança",
+      "situacao": "Marta disputa a representação da turma. Apesar do apoio às suas propostas, colegas dizem que uma mulher seria emotiva demais para liderar.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Manter o foco nas propostas.",
+          "consequencia": "Você sustenta a candidatura pelo trabalho apresentado. O rótulo pode continuar influenciando a votação sem ser discutido."
+        },
+        {
+          "id": "b",
+          "texto": "Propor um debate sobre os critérios de escolha.",
+          "consequencia": "Você questiona o padrão usado para avaliar a liderança. Isso pode deslocar a atenção das propostas para um conflito sobre sua candidatura."
+        },
+        {
+          "id": "c",
+          "texto": "Apoiar outra candidatura com propostas próximas.",
+          "consequencia": "Você pode preservar energia e manter parte da agenda. Também abre mão do espaço sob uma pressão que não deveria definir sua participação."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Rótulos sobre emoção podem ser usados para desqualificar mulheres sem avaliar sua capacidade de representação.",
+        "pergunta": "Quais critérios deveriam orientar a escolha de uma liderança?"
+      }
+    },
+    {
+      "id": "historia-18",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 18
+      },
+      "titulo": "A mesma regra?",
+      "situacao": "Ana e Clara andam de mãos dadas no campus. Um servidor pede que evitem demonstrações de afeto, embora outros casais não recebam a mesma orientação.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Continuar e observar como a orientação é aplicada.",
+          "consequencia": "Você mantém sua forma de convivência. Pode haver novas abordagens, e registrar o contexto ajuda a perceber se existe tratamento desigual."
+        },
+        {
+          "id": "b",
+          "texto": "Questionar o critério com apoio do NUGEDS.",
+          "consequencia": "A conversa leva o foco para a aplicação da regra. O encaminhamento pode ser demorado e exigir exposição da experiência do casal."
+        },
+        {
+          "id": "c",
+          "texto": "Evitar demonstrações de afeto no campus.",
+          "consequencia": "Você reduz a chance de confronto imediato. O custo é restringir sua convivência por uma exigência aparentemente seletiva."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Uma orientação aparentemente neutra pode produzir exclusão quando aplicada apenas a determinados casais.",
+        "pergunta": "Como identificar se uma regra é aplicada de forma desigual?"
+      }
+    },
+    {
+      "id": "historia-19",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 19
+      },
+      "titulo": "Diálogo em família",
+      "situacao": "Em uma reunião, o pai de Mateus critica um projeto sobre diversidade. Mateus participa da organização e teme que discordar afete a relação em casa.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Defender o projeto durante a reunião.",
+          "consequencia": "Você se posiciona diante da comunidade. O confronto público pode tornar o diálogo familiar mais difícil ou acirrar as posições."
+        },
+        {
+          "id": "b",
+          "texto": "Conversar depois sobre os objetivos do projeto.",
+          "consequencia": "A conversa reservada permite ouvir dúvidas e explicar o trabalho. Não há garantia de acordo, e o vínculo também pode ficar tensionado."
+        },
+        {
+          "id": "c",
+          "texto": "Recuar temporariamente da organização.",
+          "consequencia": "Você pode reduzir a pressão familiar imediata. A decisão também limita uma participação importante para você e para o projeto."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "O diálogo envolve relações, limites e condições de segurança. Discordar de alguém próximo pode ter custos concretos.",
+        "pergunta": "Como sustentar uma posição sem ignorar o contexto familiar?"
+      }
+    },
+    {
+      "id": "historia-20",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 20
+      },
+      "titulo": "Quando a piada vem de cima",
+      "situacao": "Um professor faz comentários sexistas durante as aulas. Beatriz se incomoda, mas teme que se posicionar prejudique sua avaliação.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Questionar o comentário durante a aula.",
+          "consequencia": "Você torna o incômodo visível e pode encontrar apoio. A diferença de poder exige considerar possíveis reações e formas de proteção."
+        },
+        {
+          "id": "b",
+          "texto": "Registrar os episódios e buscar orientação.",
+          "consequencia": "Um relato organizado pode apoiar o encaminhamento. A confidencialidade e os próximos passos precisam ser esclarecidos com o canal escolhido."
+        },
+        {
+          "id": "c",
+          "texto": "Não reagir naquele momento.",
+          "consequencia": "Você tenta preservar sua segurança na relação de avaliação. O desconforto e os comentários podem continuar, sem apoio visível da turma."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Relações de poder influenciam a possibilidade de se posicionar. O silêncio nem sempre indica concordância.",
+        "pergunta": "Que condições tornam mais seguro relatar uma situação assim?"
+      }
+    },
+    {
+      "id": "historia-21",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 21
+      },
+      "titulo": "Visibilidade no esporte",
+      "situacao": "O torneio feminino do campus recebe horários ruins e pouca divulgação. A organização usa o baixo público como justificativa para manter a diferença.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Concentrar o time no desempenho.",
+          "consequencia": "Você direciona energia ao jogo, algo que a equipe pode controlar. As condições de divulgação e acesso do público permanecem desiguais."
+        },
+        {
+          "id": "b",
+          "texto": "Negociar calendário e divulgação equilibrados.",
+          "consequencia": "Você questiona as condições que influenciam a presença do público. A mudança exige organização, negociação e acompanhamento."
+        },
+        {
+          "id": "c",
+          "texto": "Suspender a divulgação como forma de pressão.",
+          "consequencia": "A ação pode chamar atenção para o problema. Também pode reduzir ainda mais o público e afetar o próprio time."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Falta de visibilidade pode ser apresentada como falta de interesse, sem considerar as condições oferecidas.",
+        "pergunta": "Como avaliar o interesse quando as oportunidades são desiguais?"
+      }
+    },
+    {
+      "id": "historia-22",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 22
+      },
+      "titulo": "Confiança e privacidade",
+      "situacao": "Caio conta a uma amiga que é bissexual. Ela trata isso como uma fase e comenta com colegas sem sua autorização. Caio se sente exposto.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Conversar sobre o limite que foi ultrapassado.",
+          "consequencia": "Você explica o impacto e abre espaço para reparar a relação. A amiga pode reagir defensivamente, e a confiança não se recompõe de imediato."
+        },
+        {
+          "id": "b",
+          "texto": "Afastar-se da amiga por enquanto.",
+          "consequencia": "A distância pode proteger você de novas exposições. A relação pode se romper sem que ela compreenda o efeito de sua atitude."
+        },
+        {
+          "id": "c",
+          "texto": "Negar a informação para conter os comentários.",
+          "consequencia": "Você tenta recuperar controle sobre a exposição. Isso pode gerar outro desgaste, ao precisar sustentar uma versão imposta pelo contexto."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Acolher uma confidência exige respeitar a identidade e a decisão da pessoa sobre quem pode conhecer sua história.",
+        "pergunta": "Como reparar uma quebra de confiança sem exigir mais exposição?"
+      }
+    },
+    {
+      "id": "historia-23",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 23
+      },
+      "titulo": "Pressão sobre o corpo",
+      "situacao": "Yasmin pula refeições para se aproximar de um padrão de beleza. Léo se cobra ganhar músculos para parecer mais masculino. Amigos percebem mudanças.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Elogiar a disciplina sem abordar a preocupação.",
+          "consequencia": "Você mantém uma conversa aparentemente leve. O elogio pode reforçar a pressão sobre o corpo e dificultar que o desconforto seja compartilhado."
+        },
+        {
+          "id": "b",
+          "texto": "Conversar em particular e sugerir apoio profissional.",
+          "consequencia": "Uma abordagem sem julgamento pode abrir espaço para escuta. A pessoa pode não querer conversar; apoio não exige controlar suas decisões."
+        },
+        {
+          "id": "c",
+          "texto": "Esperar que eles procurem ajuda.",
+          "consequencia": "Você evita invadir a privacidade. Ao mesmo tempo, pode deixar passar uma oportunidade de oferecer presença e apoio sem cobrança."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Expectativas de gênero também moldam padrões corporais. Cuidar não significa vigiar ou julgar a aparência de alguém.",
+        "pergunta": "Como demonstrar preocupação sem reforçar cobranças sobre o corpo?"
+      }
+    },
+    {
+      "id": "historia-24",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 24
+      },
+      "titulo": "Dois pesos",
+      "situacao": "Após uma festa, Vítor é elogiado por seus relacionamentos, enquanto Paula recebe insultos por comportamento semelhante. Renata é amiga de Paula.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Evitar o assunto para não virar alvo.",
+          "consequencia": "Você tenta proteger sua posição no grupo. Paula pode se sentir sem apoio, e o julgamento desigual permanece sem contestação."
+        },
+        {
+          "id": "b",
+          "texto": "Acolher Paula e questionar o duplo padrão.",
+          "consequencia": "Você combina apoio e intervenção no grupo. Pode enfrentar hostilidade; vale combinar com Paula como agir sem ampliar sua exposição."
+        },
+        {
+          "id": "c",
+          "texto": "Oferecer apoio apenas em particular.",
+          "consequencia": "Você demonstra presença sem tornar o assunto mais público. Isso pode ajudar Paula, mas não muda diretamente o comportamento coletivo."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Julgar a mesma conduta de formas opostas conforme o gênero reforça desigualdades na convivência.",
+        "pergunta": "Como apoiar uma pessoa e também questionar o padrão do grupo?"
+      }
+    },
+    {
+      "id": "historia-25",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 25
+      },
+      "titulo": "A pergunta da entrevista",
+      "situacao": "Na entrevista de estágio, Gabriela é perguntada sobre planos de gravidez. O entrevistador diz que precisa se planejar. Ela teme perder a vaga.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Responder para manter a entrevista em andamento.",
+          "consequencia": "Você tenta preservar a oportunidade no momento. Pode sentir que precisou expor ou adaptar planos pessoais para ser considerada."
+        },
+        {
+          "id": "b",
+          "texto": "Redirecionar a conversa para sua qualificação.",
+          "consequencia": "Você estabelece um limite e retoma o foco profissional. A reação do entrevistador é incerta, especialmente diante da diferença de poder."
+        },
+        {
+          "id": "c",
+          "texto": "Buscar orientação do setor de estágios depois.",
+          "consequencia": "Você leva a situação a um canal de apoio. O encaminhamento pode levar tempo e não garante uma resposta imediata da empresa."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Expectativas sobre maternidade podem deslocar uma avaliação profissional para a vida pessoal da candidata.",
+        "pergunta": "Como avaliar competência sem presumir planos de vida?"
+      }
+    },
+    {
+      "id": "historia-26",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 26
+      },
+      "titulo": "Preconceitos que se cruzam",
+      "situacao": "Joana, uma mulher negra, é chamada para dar um “toque de cultura” aos projetos, mas fica fora das decisões técnicas. Ela percebe um padrão.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Articular uma conversa com NUGEDS e NEABI.",
+          "consequencia": "A articulação pode ampliar a compreensão do problema. É importante que Joana não seja obrigada a assumir sozinha o trabalho de educar o grupo."
+        },
+        {
+          "id": "b",
+          "texto": "Afastar-se de alguns trabalhos em grupo.",
+          "consequencia": "A distância pode reduzir o desgaste imediato. Também pode limitar oportunidades de aprendizagem e reconhecimento técnico."
+        },
+        {
+          "id": "c",
+          "texto": "Manter o papel e negociar espaço aos poucos.",
+          "consequencia": "Você preserva sua presença enquanto procura outras oportunidades. A estratégia pode prolongar uma expectativa que restringe sua contribuição."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Experiências de discriminação podem envolver gênero e raça ao mesmo tempo, sem se resumirem a uma única dimensão.",
+        "pergunta": "Como reconhecer contribuições sem reduzir alguém a um estereótipo?"
+      }
+    },
+    {
+      "id": "historia-27",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 27
+      },
+      "titulo": "Autonomia e afeto",
+      "situacao": "Henrique usa cadeira de rodas. Ao comentar seu interesse por Mariana, ouve de um colega que ela não vai querer uma relação. Ele começa a duvidar de si.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Desistir de se aproximar neste momento.",
+          "consequencia": "Você evita uma possível frustração imediata. A opinião do colega pode acabar definindo uma escolha que deveria ser sua."
+        },
+        {
+          "id": "b",
+          "texto": "Buscar apoio e decidir por conta própria.",
+          "consequencia": "Uma conversa de confiança pode ajudar a questionar a suposição. Abrir esse assunto exige intimidade e não deve virar pressão para se relacionar."
+        },
+        {
+          "id": "c",
+          "texto": "Conversar com Mariana sem presumir sua resposta.",
+          "consequencia": "Você permite que a interação aconteça entre vocês. A resposta pode ser positiva ou negativa, sem que isso confirme o estereótipo do colega."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Pessoas com deficiência também enfrentam suposições sobre desejo, afeto e autonomia. Nenhuma relação deve ser decidida por terceiros.",
+        "pergunta": "Como oferecer apoio sem decidir pela outra pessoa?"
+      }
+    },
+    {
+      "id": "historia-28",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 28
+      },
+      "titulo": "Cuidado sem rótulos",
+      "situacao": "Bruno cuida da pele e usa protetor solar. Colegas associam esses hábitos à feminilidade e fazem piadas. Ele passa a esconder os produtos.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Evitar usar os produtos diante da turma.",
+          "consequencia": "Você reduz a exposição às piadas naquele espaço. O hábito passa a ser condicionado pela vigilância dos colegas."
+        },
+        {
+          "id": "b",
+          "texto": "Questionar a associação entre cuidado e gênero.",
+          "consequencia": "Você torna o rótulo discutível e pode encontrar apoio. A conversa também pode atrair novas provocações antes de mudar o ambiente."
+        },
+        {
+          "id": "c",
+          "texto": "Manter o cuidado sem comentar com o grupo.",
+          "consequencia": "Você preserva o hábito e decide quanto se expor. O incômodo pode continuar enquanto o grupo não revê sua forma de tratar o tema."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Hábitos de cuidado não definem gênero ou orientação sexual. O julgamento pode limitar escolhas comuns do cotidiano.",
+        "pergunta": "Que cuidados deixam de ser praticados por medo de julgamento?"
+      }
+    },
+    {
+      "id": "historia-29",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 29
+      },
+      "titulo": "Quem aparece na ciência",
+      "situacao": "Um cartaz do campus destaca apenas cientistas homens. Ao ser questionada por Luana, a organização diz desconhecer contribuições relevantes de mulheres.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Apresentar referências e propor uma revisão.",
+          "consequencia": "Você oferece caminhos concretos para ampliar a representação. A pesquisa exige trabalho e a organização pode resistir à mudança."
+        },
+        {
+          "id": "b",
+          "texto": "Questionar o cartaz publicamente.",
+          "consequencia": "A crítica pode ampliar a visibilidade da ausência. Também pode endurecer o diálogo com a equipe responsável pelo evento."
+        },
+        {
+          "id": "c",
+          "texto": "Não insistir na discussão agora.",
+          "consequencia": "Você evita o desgaste com a organização. A seleção continua transmitindo uma imagem limitada de quem produz ciência."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Reconhecimento e visibilidade influenciam quem é lembrado na história da ciência e quem se imagina fazendo parte dela.",
+        "pergunta": "Que critérios orientam quem aparece como referência?"
+      }
+    },
+    {
+      "id": "historia-30",
+      "status": "em_revisao",
+      "origem": {
+        "arquivo": "docs/historias.md",
+        "numero": 30
+      },
+      "titulo": "Construir uma conversa",
+      "situacao": "Vitória, João e Samuel querem organizar uma ação sobre diversidade no campus. Temem pouca participação e comentários hostis sobre a iniciativa.",
+      "pergunta": "Como você agiria?",
+      "opcoes": [
+        {
+          "id": "a",
+          "texto": "Organizar logo um evento de grande alcance.",
+          "consequencia": "A iniciativa pode gerar visibilidade. Sem escuta e preparação, há risco de baixa adesão e de a equipe não conseguir acolher as discussões."
+        },
+        {
+          "id": "b",
+          "texto": "Ouvir a comunidade e começar com uma roda pequena.",
+          "consequencia": "A escuta permite construir confiança e definir demandas reais. O processo leva tempo e seus resultados podem ser menos visíveis no início."
+        },
+        {
+          "id": "c",
+          "texto": "Adiar a iniciativa até encontrar mais apoio.",
+          "consequencia": "Você ganha tempo para formar uma rede. Sem um próximo passo definido, a proposta pode se perder e as dúvidas da comunidade permanecerem."
+        }
+      ],
+      "reflexao": {
+        "titulo": "Cada escolha tem implicações",
+        "texto": "Mudanças na convivência dependem de escuta, continuidade e participação, além da realização de um evento.",
+        "pergunta": "Que primeiro passo tornaria essa conversa possível no campus?"
       }
     }
   ]
