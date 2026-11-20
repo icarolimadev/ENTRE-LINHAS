@@ -1,5 +1,6 @@
 import { navegarPara } from '../../js/navigation/navigation.js';
 
+export function inicializarFormulario() {
 const chave = 'entreLinhas.apelido';
 const campoNome = document.querySelector('#nome');
 const formulario = campoNome?.form;
@@ -40,4 +41,4 @@ if (formulario) {
 
     navegarPara('inicio');
   });
-}
+}}

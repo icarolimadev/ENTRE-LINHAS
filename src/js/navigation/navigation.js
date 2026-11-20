@@ -4,19 +4,21 @@
 
 // A raiz é calculada a partir deste arquivo (src/js/navigation/navigation.js),
 // independentemente da página aberta ou da subpasta de hospedagem.
-export const BASE_URL = new URL('../../../', import.meta.url).href;
+
+ const BASE_URL = new URL('../../../', import.meta.url).href;
 
 // Cadastre cada nova página aqui, com um nome único e um caminho
 // relativo à raiz do projeto, sem começar com "/".
 // Exemplo: creditos: 'src/pages/creditos.html',
 // Object.freeze impede alterações acidentais durante a execução.
-export const ROTAS = Object.freeze({
+ const ROTAS = Object.freeze({
   entrada: 'index.html',
   boasVindas: 'src/pages/boas-vindas.html',
   identificacao: 'src/pages/identificação.html',
   inicio: 'src/pages/inicio.html',
   comoFuciona: 'src/pages/comoFuciona.html',
   creditos: 'src/pages/creditos.html',
+  historia1: 'src/pages/historia1.html',
 });
 
 // ============================================================
@@ -30,7 +32,7 @@ const ESPERA_APOS_VIDEO_MS = 0;
 const LIMITE_SEM_PROGRESSO_MS = 10000;
 const videosInicializados = new WeakSet();
 
-export function iniciarIntroducao() {
+ function iniciarIntroducao() {
   const video = document.querySelector('.intro__video');
   if (!video) {
     if (document.body.classList.contains('pagina-entrada')) {
@@ -143,7 +145,7 @@ export function iniciarIntroducao() {
 let navegacaoEmAndamento = false;
 let navegacaoInicializada = false;
 
-export function obterUrlRota(nomeRota) {
+function obterUrlRota(nomeRota) {
   if (!Object.hasOwn(ROTAS, nomeRota)) {
     throw new Error(`Rota não cadastrada: ${nomeRota}`);
   }
@@ -166,7 +168,6 @@ export function navegarPara(nomeRota, { substituir = false } = {}) {
     return false;
   }
 }
-
 export function iniciarNavegacao() {
   if (navegacaoInicializada) return;
   navegacaoInicializada = true;
@@ -201,6 +202,8 @@ export function iniciarNavegacao() {
   window.addEventListener('pageshow', () => {
     navegacaoEmAndamento = false;
   });
+
+  iniciarIntroducao();
 }
 
 
@@ -253,6 +256,3 @@ function limparErroNavegacao() {
 }
 
 
-// Módulos executam depois da leitura do HTML.
-iniciarNavegacao();
-iniciarIntroducao();
