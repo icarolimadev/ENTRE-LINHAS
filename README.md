@@ -18,7 +18,7 @@
 
 **Escolhas · Perspectivas · Reflexão**
 
-[Conheça o projeto](#sobre) · [Execute localmente](#executar) · [Explore a biblioteca](#biblioteca) · [Veja os testes](#testes)
+[Conheça o projeto](#sobre) · [Tecnologias](#tecnologia) · [Execute localmente](#executar) · [Explore a biblioteca](#biblioteca) · [Veja os testes](#testes)
 
 </div>
 
@@ -162,6 +162,26 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 <a id="tecnologia"></a>
 ## 🛠️ Por dentro do projeto
 
+<div align="center">
+
+### As tecnologias por trás de cada escolha
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs&theme=dark" alt="HTML5, CSS3, JavaScript e Node.js" height="56">
+</p>
+
+**HTML5 · CSS3 · JavaScript · Node.js**
+
+<p>
+  <img src="https://img.shields.io/badge/Dados-JSON-DFABFF?style=for-the-badge&logo=json&logoColor=DFABFF&labelColor=341748" alt="Dados em JSON">
+  <img src="https://img.shields.io/badge/Persistência-LocalStorage-A855F7?style=for-the-badge&labelColor=341748" alt="Persistência com LocalStorage">
+  <img src="https://img.shields.io/badge/Testes-Chrome-DFABFF?style=for-the-badge&logo=googlechrome&logoColor=DFABFF&labelColor=341748" alt="Testes no Chrome">
+</p>
+
+**Histórias em JSON. Escolhas em JavaScript. Identidade em CSS.**
+
+</div>
+
 | Tecnologia | Uso |
 | :--- | :--- |
 | **HTML5** | Estrutura das páginas e elementos semânticos. |
@@ -170,6 +190,22 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 | **JSON** | Separação do conteúdo das histórias e da lógica do jogo. |
 | **LocalStorage** | Persistência local do apelido e do progresso. |
 | **Node.js e Chrome** | Testes da lógica e do comportamento no navegador. |
+
+<div align="center">
+
+#### 🤖 Apoio ao desenvolvimento
+
+<img src="https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="Ícone da OpenAI, criadora do Codex" width="40" height="40">
+
+<p>
+  <img src="https://img.shields.io/badge/OpenAI-Codex-DFABFF?style=for-the-badge&labelColor=341748" alt="OpenAI Codex">
+</p>
+
+**Codex** como assistente de IA no desenvolvimento e na documentação do projeto.
+
+</div>
+
+### Organização dos arquivos
 
 ```text
 entre linhas/
