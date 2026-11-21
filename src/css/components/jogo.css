@@ -1,3 +1,9 @@
+/* O título recebe foco programático para anunciar a nova tela.
+ * Remove apenas seu contorno; controles mantêm o foco visível de teclado. */
+[data-historia-conteudo] h1[tabindex="-1"]:focus {
+    outline: none;
+}
+
 .jogo__aviso {
     width: min(100%, 440px);
     margin: 8px auto;
