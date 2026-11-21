@@ -1,24 +1,16 @@
 .pagina-reflexao {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
-    overflow: hidden;
 }
 
 .reflexao {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    height: 100svh;
-    overflow-y: auto;
-    overscroll-behavior-y: none;
+    height: 100dvh;
 }
 
 /* Compacta apenas esta tela, preservando os componentes das demais páginas. */
-.reflexao > .cabecalho-logo {
-    flex-shrink: 0;
-    padding-top: max(12px, env(safe-area-inset-top));
-    padding-bottom: 12px;
-}
 
 .reflexao .logo {
     width: 44px;
@@ -79,25 +71,10 @@
     padding-block: 10px;
 }
 
-.reflexao > .rodape {
-    flex-shrink: 0;
-    padding-top: 16px;
-}
-
-.reflexao .rodape__ondas {
-    height: clamp(40px, 8svh, 72px);
-}
-
 /* Telas baixas recebem espaçamentos menores, sem ocultar textos ou ações. */
 @media (max-height: 640px) {
-    .reflexao > .rodape { padding-top: 8px; }
-    .reflexao__titulo { margin-block: 2px 6px; }
+        .reflexao__titulo { margin-block: 2px 6px; }
     .reflexao__etapa { margin-bottom: 6px; }
-    .reflexao .rodape__ondas { height: 32px; }
-    .reflexao > .cabecalho-logo {
-        padding-top: max(8px, env(safe-area-inset-top));
-        padding-bottom: 4px;
-    }
 
     .reflexao .logo {
         width: 32px;
@@ -126,5 +103,42 @@
 @media (max-width: 359px) {
     .reflexao__conteudo {
         padding-inline: 20px;
+    }
+}
+
+/* Altura no main, preservando o cabeçalho e o rodapé padrão. */
+.reflexao > .cabecalho-logo {
+    flex-shrink: 0;
+    padding: max(8px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left));
+}
+
+.reflexao > section.reflexao__conteudo {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: safe center;
+    padding: 8px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+    scroll-padding-block: 12px;
+}
+
+.reflexao > .rodape {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 0;
+    min-height: env(safe-area-inset-bottom, 0px);
+}
+
+/* Avisos de carregamento/erro também precisam permanecer acessíveis. */
+.reflexao > :is(.jogo__aviso, [data-historia-aviso]) {
+    flex-shrink: 0;
+    max-height: 25vh;
+    max-height: 25dvh;
+    overflow-y: auto;
+}
+
+@media (max-width: 359px) {
+    .reflexao > section.reflexao__conteudo {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
     }
 }

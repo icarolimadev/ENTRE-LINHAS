@@ -1,36 +1,18 @@
 .pagina-historia {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
-    overflow: hidden;
 }
 
 .historia {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    height: 100svh;
-    overflow-y: auto;
-    overscroll-behavior-y: none;
-}
-
-.historia > .cabecalho-logo {
-    flex-shrink: 0;
-    padding-top: max(12px, env(safe-area-inset-top));
-    padding-bottom: 12px;
+    height: 100dvh;
 }
 
 .historia .logo {
     width: 44px;
     height: 44px;
-}
-
-.historia > .rodape {
-    flex-shrink: 0;
-    padding-top: 16px;
-}
-
-.historia .rodape__ondas {
-    height: clamp(40px, 8svh, 72px);
 }
 
 .historia__conteudo {
@@ -111,7 +93,6 @@
 }
 
 @media (max-height: 640px) {
-    .historia > .cabecalho-logo { padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: 4px; }
     .historia .logo { width: 32px; height: 32px; }
     .historia__titulo { margin-block: 6px; font-size: 1.5rem; }
     .historia__card { padding: 10px; }
@@ -119,12 +100,47 @@
     .historia__opcoes { gap: 8px; margin-top: 8px; }
     .historia__opcoes button { padding: 8px 10px; font-size: 0.875rem; line-height: 1.4; }
     .historia__orientacao { margin-top: 8px; }
-    .historia > .rodape { padding-top: 8px; }
-    .historia .rodape__ondas { height: 32px; }
 }
 
 @media (max-width: 359px) {
     .historia__conteudo {
         padding-inline: 20px;
+    }
+}
+
+/* Altura no main, preservando o cabeçalho e o rodapé padrão. */
+.historia > .cabecalho-logo {
+    flex-shrink: 0;
+    padding: max(8px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left));
+}
+
+.historia > section.historia__conteudo {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: safe center;
+    padding: 8px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+    scroll-padding-block: 12px;
+}
+
+.historia > .rodape {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 0;
+    min-height: env(safe-area-inset-bottom, 0px);
+}
+
+/* Avisos de carregamento/erro também precisam permanecer acessíveis. */
+.historia > :is(.jogo__aviso, [data-historia-aviso]) {
+    flex-shrink: 0;
+    max-height: 25vh;
+    max-height: 25dvh;
+    overflow-y: auto;
+}
+
+@media (max-width: 359px) {
+    .historia > section.historia__conteudo {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
     }
 }

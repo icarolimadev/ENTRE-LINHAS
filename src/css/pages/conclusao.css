@@ -1,22 +1,13 @@
 .pagina-conclusao {
     background-color: var(--fundo-principal);
     color: var(--texto-principal);
-    overflow: hidden;
 }
 
 .conclusao {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    height: 100svh;
-    overflow-y: auto;
-    overscroll-behavior-y: none;
-}
-
-.conclusao > .cabecalho-logo {
-    flex-shrink: 0;
-    padding-top: max(12px, env(safe-area-inset-top));
-    padding-bottom: 12px;
+    height: 100dvh;
 }
 
 .conclusao .logo {
@@ -69,24 +60,50 @@
     padding-block: 10px;
 }
 
-.conclusao > .rodape {
-    flex-shrink: 0;
-    padding-top: 16px;
-}
-
-.conclusao .rodape__ondas {
-    height: clamp(40px, 8svh, 72px);
-}
-
 @media (max-height: 640px) {
-    .conclusao > .cabecalho-logo { padding-bottom: 4px; }
     .conclusao .logo { width: 36px; height: 36px; }
     .conclusao__titulo { margin-block: 12px; }
     .conclusao__card { padding: 12px; }
     .conclusao__pergunta { margin-block: 12px; }
-    .conclusao > .rodape { padding-top: 8px; }
-}
+    }
 
 @media (max-width: 359px) {
     .conclusao__conteudo { padding-inline: 20px; }
+}
+
+/* Altura no main, preservando o cabeçalho e o rodapé padrão. */
+.conclusao > .cabecalho-logo {
+    flex-shrink: 0;
+    padding: max(8px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left));
+}
+
+.conclusao > section.conclusao__conteudo {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: safe center;
+    padding: 8px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+    scroll-padding-block: 12px;
+}
+
+.conclusao > .rodape {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 0;
+    min-height: env(safe-area-inset-bottom, 0px);
+}
+
+/* Avisos de carregamento/erro também precisam permanecer acessíveis. */
+.conclusao > :is(.jogo__aviso, [data-historia-aviso]) {
+    flex-shrink: 0;
+    max-height: 25vh;
+    max-height: 25dvh;
+    overflow-y: auto;
+}
+
+@media (max-width: 359px) {
+    .conclusao > section.conclusao__conteudo {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
 }

@@ -6,8 +6,8 @@
 .como-funciona {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
 }
 
 .como-funciona__conteudo {
@@ -47,5 +47,42 @@
 @media (max-width: 359px) {
     .como-funciona__conteudo {
         padding-inline: 20px;
+    }
+}
+
+/* Altura no main, preservando o cabeçalho e o rodapé padrão. */
+.como-funciona > .cabecalho-logo {
+    flex-shrink: 0;
+    padding: max(8px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left));
+}
+
+.como-funciona > section.como-funciona__conteudo {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    align-content: safe center;
+    padding: 8px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+    scroll-padding-block: 12px;
+}
+
+.como-funciona > .rodape {
+    flex-shrink: 0;
+    margin-top: auto;
+    padding-top: 0;
+    min-height: env(safe-area-inset-bottom, 0px);
+}
+
+/* Avisos de carregamento/erro também precisam permanecer acessíveis. */
+.como-funciona > :is(.jogo__aviso, [data-historia-aviso]) {
+    flex-shrink: 0;
+    max-height: 25vh;
+    max-height: 25dvh;
+    overflow-y: auto;
+}
+
+@media (max-width: 359px) {
+    .como-funciona > section.como-funciona__conteudo {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
     }
 }

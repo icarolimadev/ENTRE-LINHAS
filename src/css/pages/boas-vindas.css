@@ -4,44 +4,77 @@
     color: var(--texto-principal);
 }
 
-/* Ocupa ao menos a tela e permite rolagem quando o conteúdo precisa de mais espaço. */
+/* A altura acompanha as barras do navegador, com fallback para navegadores antigos. */
 .boas-vindas {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    height: 100vh;
+    height: 100dvh;
     width: 100%;
+}
+
+.boas-vindas > .cabecalho-logo {
+    padding: max(8px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) 8px max(24px, env(safe-area-inset-left));
+}
+
+.boas-vindas .logo {
+    width: 44px;
+    height: 44px;
+}
+
+.boas-vindas > .rodape {
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /* Alinha o conteúdo à largura do cabeçalho compartilhado. */
 .boas-vindas__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    overflow-y: auto;
     width: min(100%, 440px);
     margin-inline: auto;
-    padding-inline: 24px;
+    padding: 8px max(24px, env(safe-area-inset-right)) 12px max(24px, env(safe-area-inset-left));
+    text-align: center;
+    scroll-padding-block: 12px;
+}
+
+/* Margens automáticas centralizam quando há espaço e zeram quando é preciso rolar. */
+.boas-vindas__conteudo > * {
+    flex-shrink: 0;
+}
+
+.boas-vindas__conteudo > .botao {
+    margin-bottom: auto;
 }
 
 /* Título fluido: reduz em telas estreitas e preserva a hierarquia da referência. */
 .boas-vindas__titulo {
-    margin: 0 0 20px;
+    margin: auto 0 12px;
     font-size: clamp(1.25rem, 5.8vw, 1.75rem);
     letter-spacing: -0.035em;
     line-height: 1.35;
 }
 
 .boas-vindas__ilustracao {
-    width: 100%;
+    width: min(100%, 308px);
+    max-height: clamp(80px, 30vh, 265px);
+    max-height: clamp(80px, 30dvh, 265px);
+    object-fit: contain;
     border-radius: 24px;
 }
 
 .boas-vindas__nome {
-    margin: 20px 0 14px;
+    margin: 12px 0 8px;
     color: var(--destaque);
     font-size: clamp(1.5rem, 6vw, 1.875rem);
     letter-spacing: -0.025em;
 }
 
 .boas-vindas__mensagem {
-    margin: 0 0 18px;
+    margin: 0 0 12px;
     color: var(--texto-secundario);
     font-size: 0.8125rem;
 }
@@ -49,6 +82,7 @@
 /* Em telas muito estreitas, preserva mais espaço para título e ilustração. */
 @media (max-width: 359px) {
     .boas-vindas__conteudo {
-        padding-inline: 20px;
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
     }
 }

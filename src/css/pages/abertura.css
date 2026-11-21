@@ -2,12 +2,17 @@
     background: var(--fundo-principal);
     color: var(--texto-principal);
 }
+.pagina-abertura > main {
+    height: 100vh;
+    height: 100dvh;
+}
+
 .abertura {
-    min-height: 100vh;
-    min-height: 100dvh;
+    height: 100%;
+    overflow-y: auto;
     display: grid;
-    place-items: center;
-    padding: max(32px, env(safe-area-inset-top)) 24px max(32px, env(safe-area-inset-bottom));
+    place-items: safe center;
+    padding: max(32px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(32px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
 }
 .abertura__conteudo {
     width: min(100%, 320px);
@@ -36,7 +41,7 @@
 }
 .pagina-abertura--animando { overflow: hidden; background: #000; }
 @media (max-height: 540px) and (orientation: landscape) {
-    .abertura { padding-block: 20px; }
+    .abertura { padding-top: max(20px, env(safe-area-inset-top)); padding-bottom: max(20px, env(safe-area-inset-bottom)); }
     .abertura__logo { width: 140px; }
     .abertura__titulo { margin: 8px 0 16px; font-size: 1.75rem; }
 }
