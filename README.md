@@ -167,10 +167,10 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 ### As tecnologias por trás de cada escolha
 
 <p>
-  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs&theme=dark" alt="HTML5, CSS3, JavaScript e Node.js" height="56">
+  <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,figma&theme=dark" alt="HTML5, CSS3, JavaScript, Node.js e Figma" height="56">
 </p>
 
-**HTML5 · CSS3 · JavaScript · Node.js**
+**HTML5 · CSS3 · JavaScript · Node.js · Figma**
 
 <p>
   <img src="https://img.shields.io/badge/Dados-JSON-DFABFF?style=for-the-badge&logo=json&logoColor=DFABFF&labelColor=341748" alt="Dados em JSON">
@@ -190,6 +190,7 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 | **JSON** | Separação do conteúdo das histórias e da lógica do jogo. |
 | **LocalStorage** | Persistência local do apelido e do progresso. |
 | **Node.js e Chrome** | Testes da lógica e do comportamento no navegador. |
+| **Figma** | Design e prototipação das interfaces. |
 
 <div align="center">
 
