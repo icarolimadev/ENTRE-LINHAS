@@ -40,7 +40,7 @@ Cada história apresenta três caminhos. Depois da escolha, o jogo mostra possí
 
 | Etapa | O que acontece |
 | :--- | :--- |
-| **1 · Entre** | Assista à introdução, conheça a proposta e informe um apelido ou entre como visitante. |
+| **1 · Entre** | Acompanhe a abertura animada, conheça a proposta e informe um apelido ou entre como visitante. |
 | **2 · Leia** | Receba uma seleção de cinco histórias da biblioteca. |
 | **3 · Escolha** | Decida entre três alternativas para a situação apresentada. |
 | **4 · Reflita** | Leia o retorno da sua escolha e a pergunta de reflexão. Você pode rever a situação e trocar a resposta. |
@@ -209,8 +209,8 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 
 ```text
 entre linhas/
-├── index.html                  # Introdução em vídeo
-├── assets/                     # Logo, ilustrações, ícones e vídeo
+├── index.html                  # Introdução vetorial animada
+├── assets/                     # Logo, ilustrações, ícones e áudio
 ├── src/
 │   ├── pages/                  # Telas da experiência
 │   ├── css/
@@ -228,6 +228,26 @@ entre linhas/
 │       └── main.js             # Entrada compartilhada
 └── tests/                      # Testes do motor, fluxo e biblioteca
 ```
+
+### Animação de entrada
+
+A raiz abre uma composição **SVG animada com JavaScript nativo (Web Animations API)**, reconstruída a partir da introdução original. Sete letras coloridas, o arco e a inscrição formam a marca em aproximadamente cinco segundos; a sequência permanece visível e encerra com fade aos oito segundos, seguindo para as boas-vindas.
+
+- `index.html`: formas vetoriais e link acessível para pular.
+- `src/css/pages/entrada.css`: composição responsiva, fundo preto e foco de teclado, sem fontes externas.
+- `src/js/navigation/introducao.js`: tempos, trajetórias, áudio opcional e movimento reduzido.
+- `src/js/navigation/entrada-seguranca.js`: navegação única e limite independente de 11 segundos para falhas do módulo.
+- `assets/audio/introducao.m4a`: áudio original separado, sem transcodificação. Bloqueios de autoplay não interrompem a sequência.
+
+Com movimento reduzido, a marca aparece estática por 1,4 segundo antes do avanço. Sem JavaScript, a marca e o link nativo continuam disponíveis; nesse caso o avanço é manual. A entrada não utiliza player, MP4, canvas ou sequência de imagens. O MP4 original permanece apenas como referência local e é excluído da publicação por `.vercelignore`.
+
+Para validar a introdução, com o servidor e Chrome de testes descritos abaixo ativos:
+
+```bash
+node tests/introducao-navegador.mjs
+```
+
+As capturas e o relatório desse teste ficam em `docs/evidencias-introducao/`. A vetorização conserva a composição da referência; interpolação, rasterização e rastros são aproximações, não uma reprodução pixel a pixel. A escala em desktop se adapta à viewport, sem simular uma tela de vídeo vertical.
 
 `historia1.html` e `reflexao1.html` são **telas reutilizáveis**: os nomes dos arquivos foram mantidos, mas elas exibem qualquer história da biblioteca. Não existe uma cópia de HTML para cada situação.
 

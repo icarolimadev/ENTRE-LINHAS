@@ -18,20 +18,15 @@ try {
     await call('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
     await ir('index.html');
     await esperar(`location.pathname.endsWith('boas-vindas.html')`);
-    ok('movimento reduzido pula a introdução');
+    ok('movimento reduzido mostra marca estática e avança');
     await call('Emulation.setEmulatedMedia', { features: [] });
     await ir('index.html');
-    await esperar(`!!document.querySelector('.intro__video')`);
-    assert.equal(await avaliar(`document.querySelector('video').controls`), true);
-    await esperar(`document.querySelector('video')?.currentTime > 0`);
-    await avaliar(`document.querySelector('video').pause()`);
-    await pausa(11000);
-    assert.equal(await avaliar(`document.querySelector('video')?.paused`), true);
+    await esperar(`!!document.querySelector('.intro__marca')`);
+    assert.equal(await avaliar(`document.querySelectorAll('video, iframe').length`), 0);
     await tecla('Tab');
-    // Controles nativos também participam do teclado; verifica o link diretamente.
-    await avaliar(`document.querySelector('.intro__continuar').focus()`);
+    assert.equal(await avaliar(`document.activeElement.className`), 'intro__continuar');
     await tecla('Enter'); await esperar(`location.pathname.endsWith('boas-vindas.html')`);
-    ok('vídeo pausado não é reiniciado pelo monitor e pode ser pulado pelo teclado');
+    ok('introdução vetorial pode ser pulada pelo teclado');
     await avaliar(`localStorage.removeItem('entreLinhas.apelido')`);
     await ir('src/pages/identificação.html'); await pronta();
     await tecla('Tab');

@@ -68,15 +68,15 @@ try {
     assert.equal(await avaliar('window.__injetado'),false);
     await esperar(`window.__violacoes.some(v=>v.diretiva==='script-src-elem' && v.bloqueado==='https://example.invalid/injetado.js')`);
     ok('CSP bloqueia script inline, script externo e objeto');
-    for(const pagina of ['index.html','src/pages/identificação.html','src/js/main.js','src/data/historias.json','assets/videos/intro-celular.mp4']) {
+    for(const pagina of ['index.html','src/pages/identificação.html','src/js/main.js','src/data/historias.json','assets/audio/introducao.m4a']) {
         const response=await fetch(new URL(pagina,base));assert.equal(response.status,200);
         assert.equal(response.headers.get('x-content-type-options'),'nosniff');
         assert.equal(response.headers.get('x-frame-options'),'DENY');
         assert.match(response.headers.get('content-security-policy'),/frame-ancestors 'none'/);
         const mime=response.headers.get('content-type');
-        assert.match(mime,pagina.endsWith('.js')?/javascript/:pagina.endsWith('.json')?/application\/json/:pagina.endsWith('.mp4')?/video\/mp4/:/text\/html/);
+        assert.match(mime,pagina.endsWith('.js')?/javascript/:pagina.endsWith('.json')?/application\/json/:pagina.endsWith('.m4a')?/audio\/mp4/:/text\/html/);
     }
-    ok('cabeçalhos e MIME locais corretos para HTML, JS, JSON e vídeo');
+    ok('cabeçalhos e MIME locais corretos para HTML, JS, JSON e áudio');
     assert.deepEqual(erros,[]);
     fs.mkdirSync('docs/qa-evidencias', { recursive: true });
     fs.writeFileSync('docs/qa-evidencias/seguranca-navegador.json',JSON.stringify({ambiente:base,resultados,recursos:rede,erros,limite:'Cabeçalhos servidos localmente; não prova configuração do domínio Vercel.'},null,2));

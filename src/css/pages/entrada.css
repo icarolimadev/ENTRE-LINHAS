@@ -1,45 +1,56 @@
-/* Tela de entrada: base da página, área visível e apresentação do vídeo. */
-
-/* Restringe o fundo preto e o bloqueio de rolagem à página da introdução. */
+/* Entrada independente: preto integral, sem fontes externas ou estilos de outras telas. */
 .pagina-entrada {
+    margin: 0;
     overflow: hidden;
-    background-color: #000;
+    background: #000;
+    color: #fff;
+    font-family: system-ui, sans-serif;
 }
-
-/* Ocupa a tela; dvh acompanha a área visível quando as barras do celular mudam. */
 .intro {
+    display: grid;
+    place-items: center;
     width: 100%;
-    height: 100vh; /* Alternativa para navegadores sem suporte a dvh. */
+    height: 100vh;
     height: 100dvh;
     overflow: hidden;
-    background-color: #000;
+    background: #000;
 }
-
-/*
- * O elemento ocupa a tela, mas contain preserva a imagem inteira sem distorção
- * em celulares na vertical ou horizontal e nas demais telas.
- * O espaço restante mostra o fundo preto, evitando cortes no conteúdo do vídeo.
- */
-.intro__video {
+.intro__marca {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    background-color: #000;
+    width: min(100vw, calc(100vh - 100px), 700px);
+    width: min(100vw, calc(100dvh - 100px), 700px);
+    height: auto;
+    overflow: visible;
 }
-
-/* Acesso às boas-vindas, disponível mesmo se o navegador bloquear o vídeo. */
+.intro__peca, .intro__letra, .intro__arco {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+.intro__arco { transform-box: view-box; transform-origin: 540px 1170px; }
+/* A marca fica completa sem JS. A classe é aplicada apenas ao iniciar a sequência. */
+.intro--animando .intro__peca,
+.intro--animando .intro__letra { opacity: 0; }
+.intro--animando .intro__arco { stroke-dasharray: 1; stroke-dashoffset: 1; }
 .intro__continuar {
     position: fixed;
-    right: max(20px, env(safe-area-inset-right));
-    top: max(20px, env(safe-area-inset-top));
-    max-width: calc(100% - 40px);
-    min-height: 48px;
-    padding: 12px 20px;
-    border: 1px solid #ffffff80;
-    border-radius: 999px;
-    background-color: #000c;
-    color: #fff;
+    top: max(16px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    max-width: calc(100% - 32px);
+    color: #ddd;
+    background: #000c;
+    border-radius: 6px;
+    font-size: clamp(12px, 3.2vw, 14px);
     text-decoration: none;
+}
+.intro__continuar:hover { color: #fff; text-decoration: underline; }
+.intro__continuar:focus-visible { outline: 3px solid #dfabff; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+    .intro--animando .intro__peca,
+    .intro--animando .intro__letra { opacity: 1; }
+    .intro--animando .intro__arco { stroke-dashoffset: 0; }
 }
