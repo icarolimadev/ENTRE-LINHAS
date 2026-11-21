@@ -17,6 +17,7 @@ try {
     await call('Network.setCacheDisabled', { cacheDisabled: true });
     await call('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
     await ir('index.html');
+    await clicar('.abertura__botao');
     await esperar(`location.pathname.endsWith('boas-vindas.html')`);
     ok('movimento reduzido mostra marca estática e avança');
     await call('Emulation.setEmulatedMedia', { features: [] });
@@ -24,6 +25,8 @@ try {
     await esperar(`!!document.querySelector('.intro__marca')`);
     assert.equal(await avaliar(`document.querySelectorAll('video, iframe').length`), 0);
     await tecla('Tab');
+    assert.equal(await avaliar(`document.activeElement.classList.contains('abertura__botao')`), true);
+    await tecla('Enter');
     assert.equal(await avaliar(`document.activeElement.className`), 'intro__continuar');
     await tecla('Enter'); await esperar(`location.pathname.endsWith('boas-vindas.html')`);
     ok('introdução vetorial pode ser pulada pelo teclado');

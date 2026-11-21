@@ -22,3 +22,6 @@
 @import url("./pages/historia.css");
 @import url("./pages/reflexao.css");
 @import url("./pages/conclusao.css");
+
+/* Tela de abertura por interação. */
+@import url("./pages/abertura.css");

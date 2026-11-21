@@ -209,7 +209,7 @@ As prévias não alteram o progresso e deixam os botões do jogo desativados. Li
 
 ```text
 entre linhas/
-├── index.html                  # Introdução vetorial animada
+├── index.html                  # Abertura e introdução vetorial
 ├── assets/                     # Logo, ilustrações, ícones e áudio
 ├── src/
 │   ├── pages/                  # Telas da experiência
@@ -231,15 +231,17 @@ entre linhas/
 
 ### Animação de entrada
 
-A raiz abre uma composição **SVG animada com JavaScript nativo (Web Animations API)**, reconstruída a partir da introdução original. Sete letras coloridas, o arco e a inscrição formam a marca em aproximadamente cinco segundos; a sequência permanece visível e encerra com fade aos oito segundos, seguindo para as boas-vindas.
+A raiz mostra a logo centralizada, o título **Entre Linhas** e o botão **Entrar**, com o fundo roxo padrão. O clique inicia o áudio e, no mesmo documento, uma composição **SVG animada com JavaScript nativo (Web Animations API)**, reconstruída a partir da introdução original. Sete letras coloridas, o arco e a inscrição formam a marca em aproximadamente cinco segundos; a sequência permanece visível e encerra com fade aos oito segundos, seguindo para as boas-vindas.
 
-- `index.html`: formas vetoriais e link acessível para pular.
-- `src/css/pages/entrada.css`: composição responsiva, fundo preto e foco de teclado, sem fontes externas.
+- `index.html`: abertura oficial, formas vetoriais e link acessível para pular.
+- `src/css/pages/abertura.css`: tela inicial aprovada, integrada pelo `main.css`.
+- `src/js/navigation/entrada.js`: conecta o clique à animação sem perder a ativação do áudio.
+- `src/css/pages/entrada.css`: composição responsiva da animação, fundo preto e foco de teclado. A abertura reutiliza as fontes compartilhadas do sistema.
 - `src/js/navigation/introducao.js`: tempos, trajetórias, áudio opcional e movimento reduzido.
-- `src/js/navigation/entrada-seguranca.js`: navegação única e limite independente de 11 segundos para falhas do módulo.
+- `src/js/navigation/entrada-seguranca.js`: navegação única e limite independente de 11 segundos **após Entrar** para falhas do módulo. Não há avanço automático enquanto a pessoa está na abertura.
 - `assets/audio/introducao.m4a`: áudio original separado, sem transcodificação. Bloqueios de autoplay não interrompem a sequência.
 
-Com movimento reduzido, a marca aparece estática por 1,4 segundo antes do avanço. Sem JavaScript, a marca e o link nativo continuam disponíveis; nesse caso o avanço é manual. A entrada não utiliza player, MP4, canvas ou sequência de imagens. O MP4 original permanece apenas como referência local e é excluído da publicação por `.vercelignore`.
+Após Entrar, com movimento reduzido, a marca aparece estática por 1,4 segundo antes do avanço. Sem JavaScript, Entrar leva diretamente às boas-vindas. O antigo endereço `src/pages/entrada-teste.html` redireciona para a entrada oficial. A entrada não utiliza player, MP4, canvas ou sequência de imagens. O MP4 original permanece apenas como referência local e é excluído da publicação por `.vercelignore`.
 
 Para validar a introdução, com o servidor e Chrome de testes descritos abaixo ativos:
 

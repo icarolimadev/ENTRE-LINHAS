@@ -1,20 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#1C0B2D">
     <title>Entre Linhas</title>
-    <link rel="icon" href="assets/logo/logo.png" type="image/png">
-    <!-- A entrada é autônoma: não carrega fontes ou recursos externos. -->
-    <link rel="stylesheet" href="src/css/pages/entrada.css">
+    <link rel="icon" href="assets/logo/logo.png">
+    <link rel="stylesheet" href="src/css/main.css">
     <script src="src/js/navigation/entrada-seguranca.js" defer></script>
-    <script type="module" src="src/js/navigation/introducao.js"></script>
+    <script type="module" src="src/js/navigation/entrada.js"></script>
 </head>
-<body class="pagina-entrada">
-    <main class="intro" aria-label="Apresentação do Entre Linhas — Núcleo de Gênero e Diversidade Sexual do IFCE">
-        <!-- Formas estáticas vetorizadas da identidade original; movimento feito no navegador. -->
-        <svg class="intro__marca" viewBox="0 630 1080 1080" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<body class="pagina-abertura">
+    <main>
+        <section class="abertura" aria-labelledby="titulo-entrada">
+            <div class="abertura__conteudo">
+                <img class="abertura__logo" src="assets/logo/logo.png"
+                    alt="Núcleo de Gênero e Diversidade Sexual do IFCE" width="512" height="512">
+                <h1 class="titulo abertura__titulo" id="titulo-entrada">Entre Linhas</h1>
+                <a class="botao abertura__botao" href="src/pages/boas-vindas.html">Entrar</a>
+                <p class="abertura__aviso legenda" role="status" aria-live="polite">Seja bem vindo!</p>
+            </div>
+        </section>
+        <section class="intro" data-inicio-manual hidden aria-label="Apresentação do Entre Linhas">
+            <svg class="intro__marca" viewBox="0 630 1080 1080" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
         <defs><path id="intro-n" d="M404 886 H495 L590 1047 V886 H674 V1190 H588 L488 1019 V1190 H404 Z"/></defs>
         <g class="intro__peca" data-peca="0"><use href="#intro-n" fill="#d71a30" transform="translate(0 0)"/></g>
         <g class="intro__peca" data-peca="1"><use href="#intro-n" fill="#e87319" transform="translate(0 44)"/></g>
@@ -59,7 +68,8 @@
         <path class="intro__letra" data-letra="32" fill="#fff" fill-rule="evenodd" d="M916,1158 918,1158 918,1168 929,1168 929,1174 928,1174 928,1175 902,1175 901,1175 901,1156 906,1156 906,1167 907,1167 907,1168 911,1168 911,1167 912,1167 912,1158 916,1158Z"/>
         <path class="intro__letra" data-letra="33" fill="#fff" fill-rule="evenodd" d="M909,1119 910,1119 911,1117 910,1117 910,1112 909,1112 909,1110 908,1110 908,1109 909,1109 910,1107 915,1107 916,1117 920,1118 920,1117 922,1117 922,1112 921,1112 920,1105 925,1103 925,1105 926,1105 926,1110 927,1110 927,1112 928,1112 928,1119 929,1119 929,1123 928,1123 928,1125 925,1125 925,1124 924,1124 924,1125 925,1125 925,1126 928,1126 928,1128 926,1128 926,1129 928,1130 928,1133 929,1133 929,1135 930,1135 930,1138 930,1142 929,1142 928,1147 927,1147 926,1149 924,1149 923,1151 920,1151 920,1152 911,1152 911,1151 909,1151 909,1150 905,1149 905,1148 904,1148 904,1146 902,1145 902,1141 901,1141 901,1133 902,1133 902,1131 903,1131 904,1127 902,1127 902,1126 901,1126 900,1113 898,1112 898,1109 900,1109 900,1108 905,1108 905,1117 906,1117 906,1119 907,1119 907,1120 909,1119ZM910,1128 910,1131 908,1132 908,1134 907,1134 907,1136 906,1136 906,1140 908,1141 908,1143 911,1143 912,1145 919,1145 920,1143 922,1143 922,1141 923,1141 923,1139 924,1139 924,1138 923,1138 922,1133 921,1133 921,1132 920,1132 920,1130 918,1129 918,1126 915,1126 915,1127 911,1127 911,1128 910,1128Z"/>
         </svg>
-        <a class="intro__continuar" href="src/pages/boas-vindas.html">Pular introdução</a>
+            <a class="intro__continuar" href="src/pages/boas-vindas.html">Pular introdução</a>
+        </section>
     </main>
 </body>
 </html>

@@ -20,9 +20,9 @@ export const INTRODUCAO = Object.freeze({
 });
 
 const intro = document.querySelector('.intro');
-if (intro) iniciarIntroducao(intro);
+if (intro && !intro.hasAttribute('data-inicio-manual')) iniciarIntroducao(intro);
 
-function iniciarIntroducao(elemento) {
+export function iniciarIntroducao(elemento) {
     const marca = elemento.querySelector('.intro__marca');
     const preferencia = window.matchMedia('(prefers-reduced-motion: reduce)');
     const animacoes = [];
